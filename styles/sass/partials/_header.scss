@@ -1,0 +1,59 @@
+header{
+    height: 100vh;
+    // background-color: $secondaryColor;
+    position: relative;
+    color: $fithColor;
+    ul{
+        display: flex;
+        flex-direction: row;
+    }
+}
+#canvas{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:$secondaryColor;
+}
+.nameBox{
+    position: absolute;
+    margin: 0 auto;
+    top: 40%;
+    left: 0;
+    right: 0;
+    width: 40%;
+    background-color: rgba(2, 17, 27, .8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    h1{
+        font-size: 2rem;
+        margin: 0;
+        opacity: 1;
+        text-transform: uppercase;
+    }
+    h3{
+        text-transform: uppercase;
+    }
+
+    ul{
+        padding-left: 0;
+        margin: 0;
+        display:flex;
+        gap: 25px;
+        a{
+            color: $fithColor;
+            font-size: 2rem;
+        }
+    }
+    
+}
+.nameBox a:hover,
+.nameBox a:focus{
+    color: orangered;
+    cursor: pointer;
+}

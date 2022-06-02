@@ -1,0 +1,139 @@
+const menuButton = document.querySelector('.menuButton');
+const popUpMenu = document.querySelector('.popUpMenu')
+
+menuButton.addEventListener('click', () => {
+    if (popUpMenu.style.display === 'block') {
+        popUpMenu.style.display = 'none'
+    } else {
+        popUpMenu.style.display = 'block'
+    }
+})
+
+
+
+
+
+
+
+// HEADER BACKGROUND
+const canvas = document.querySelector('#canvas');
+const context = canvas.getContext('2d');
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight
+window.addEventListener('resize', (e) => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    radius: (canvas.height / 90) * (canvas.width / 90)
+    makeDots();
+});
+window.addEventListener('mouseout', () => {
+    mouse.x = undefined;
+    mouse.y = undefined;
+})
+
+let mouse = {
+    x: null,
+    y: null,
+    // radius: (canvas.height / 99) * (canvas.width / 99)
+}
+window.addEventListener('mousemove', (e) => {
+    mouse.x = e.x;
+    mouse.y = e.y;
+});
+class connectorDots {
+    constructor(x, y, directionX, directionY, size, color) {
+        this.x = x;
+        this.y = y;
+        this.directionX = directionX
+        this.directionY = directionY
+        this.size = size;
+        this.color = color;
+    }
+    draw() {
+        context.beginPath();
+        context.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+        context.fillStyle = '#FCFCFC';
+        context.fill();
+    }
+    update() {
+        if (this.x > canvas.width || this.x < 0) {
+            this.directionX = -this.directionX
+        }
+        if (this.y > canvas.width || this.y < 0) {
+            this.directionY = -this.directionY
+        }
+
+        // un comment to activat mouse collision
+        // window.addEventListener('click', () => {
+        // })
+        // let detectX = mouse.x - this.x;
+        // let detectY = mouse.y - this.y;
+        // let distance = Math.sqrt((detectX * detectX) + (detectY * detectY));
+        // if (distance < mouse.radius + this.size) {
+        //     if (mouse.x < this.x && this.x < canvas.width - this.size * 10) {
+        //         this.x += 10;
+        //     }
+        //     if (mouse.x > this.x && this.x > this.size * 10) {
+        //         this.x -= 10;
+        //     }
+        //     if (mouse.y < this.y && this.y < canvas.height - this.size * 10) {
+        //         this.y += 10;
+        //     }
+        //     if (mouse.y > this.y && this.y > this.size * 10) {
+        //         this.y -= 10;
+        //     }
+        // }
+        this.x += this.directionX;
+        this.y += this.directionY;
+        this.draw();
+    }
+}
+function makeDots() {
+    dotsArray = [];
+    let numberOfDots = (canvas.width * canvas.height) / 8000;
+    for (let i = 0; i < numberOfDots; i++) {
+        let size = Math.floor(Math.random() * 5) + 1;
+        let x = (Math.random() * (innerWidth - size * 2));
+        let y = (Math.random() * (innerHeight - size * 2));
+        let directionX = (Math.random() * 5) - 2.5;
+        let directionY = (Math.random() * 5) - 2.5;
+        let color = '#FCFCFC'
+
+        dotsArray.push(new connectorDots(x, y, directionX, directionY, size, color));
+    }
+}
+
+function dotJoin() {
+    let lineOpacity = 1;
+    for (let a = 0; a < dotsArray.length; a++) {
+        for (let b = a; b < dotsArray.length; b++) {
+            let distance = ((dotsArray[a].x - dotsArray[b].x) * (dotsArray[a].x - dotsArray[b].x)) +
+                ((dotsArray[a].y - dotsArray[b].y) * (dotsArray[a].y - dotsArray[b].y));
+            if (distance < (canvas.width / 3) * (canvas.height / 3)) {
+                lineOpacity = 1 - (distance / 10000)
+                context.strokeStyle = 'rgb(252, 252, 252, ' + lineOpacity + ')';
+                context.lineWidth = 1;
+                context.beginPath();
+                context.moveTo(dotsArray[a].x, dotsArray[a].y);
+                context.lineTo(dotsArray[b].x, dotsArray[b].y);
+                context.stroke();
+            }
+        }
+    }
+}
+
+function moveDots() {
+    requestAnimationFrame(moveDots);
+    context.clearRect(0, 0, innerWidth, innerHeight)
+
+    for (let i = 0; i < dotsArray.length; i++) {
+        dotsArray[i].update();
+    }
+    dotJoin();
+}
+
+
+makeDots();
+moveDots();
+// HEADER BACKGROUND END

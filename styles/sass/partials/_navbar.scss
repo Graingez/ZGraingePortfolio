@@ -1,0 +1,97 @@
+nav{
+    background-color: $primaryColor;
+    color: $fithColor;
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-bottom: 2px solid $fourthColor;
+    ul{
+        display: flex;
+        gap: 4%;
+        color: $fithColor;
+        justify-content: flex-end;
+        margin:0;
+        padding-right: 5%;
+        padding: 0;
+        
+        a{
+            display: block;
+            text-decoration: none;
+            color: $fithColor;
+            font-size: 1rem;
+            text-transform: uppercase;
+            line-height: 2.5rem;
+            transition: .2s ease-in-out;
+        }
+    }
+}
+.navBar{
+    padding-right: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    
+    .navMenu{
+        width: 90%;
+    }
+    .dropDown{
+        // display: none;
+        color: $fithColor;
+        display: block;
+        font-size: 2rem;
+        .menuButton{
+            display: none;
+            text-decoration: none;
+            color: $fithColor;
+        }
+    }
+    
+    .menuButton:hover,
+    .menuButton:focus{
+        color: $fourthColor;
+    }
+    .menuButton:active{
+        color: $fithColor;
+    }
+}
+nav li:hover,
+nav li:focus{
+    overflow: hidden;
+    animation: navHover 2s ease-in-out infinite;
+    
+}
+.popUpMenu{
+    display: none;
+    text-align: center;
+}
+nav a:hover,
+nav a:focus{
+    color: $fourthColor;
+}
+nav a:active{
+    color: $fithColor;
+}
+
+@keyframes navHover{
+    0% {
+		transform: translatey(0px);
+	}  
+	50% {
+		transform: translatey(-5px);
+	}
+	100% {
+		
+		transform: translatey(0px);
+	}
+}
+@media (max-width: 650px) {
+    .listMenu{
+        display: none;
+    }
+    .menuButton{
+        display: block;
+    }
+}
