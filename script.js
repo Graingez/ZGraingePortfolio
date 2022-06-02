@@ -66,24 +66,27 @@ class connectorDots {
 
         // un comment to activat mouse collision
         // window.addEventListener('click', () => {
+        //     let detectX = mouse.x - this.x;
+        //     let detectY = mouse.y - this.y;
+        //     let distance = Math.sqrt((detectX * detectX) + (detectY * detectY));
+        //     if (distance < mouse.radius + this.size) {
+        //         if (mouse.x < this.x && this.x < canvas.width - this.size * 10) {
+        //             this.x += 10;
+        //         }
+        //         if (mouse.x > this.x && this.x > this.size * 10) {
+        //             this.x -= 10;
+        //         }
+        //         if (mouse.y < this.y && this.y < canvas.height - this.size * 10) {
+        //             this.y += 10;
+        //         }
+        //         if (mouse.y > this.y && this.y > this.size * 10) {
+        //             this.y -= 10;
+        //         }
+        //     }
+        //     this.x += this.directionX;
+        //     this.y += this.directionY;
+        //     this.draw();
         // })
-        // let detectX = mouse.x - this.x;
-        // let detectY = mouse.y - this.y;
-        // let distance = Math.sqrt((detectX * detectX) + (detectY * detectY));
-        // if (distance < mouse.radius + this.size) {
-        //     if (mouse.x < this.x && this.x < canvas.width - this.size * 10) {
-        //         this.x += 10;
-        //     }
-        //     if (mouse.x > this.x && this.x > this.size * 10) {
-        //         this.x -= 10;
-        //     }
-        //     if (mouse.y < this.y && this.y < canvas.height - this.size * 10) {
-        //         this.y += 10;
-        //     }
-        //     if (mouse.y > this.y && this.y > this.size * 10) {
-        //         this.y -= 10;
-        //     }
-        // }
         this.x += this.directionX;
         this.y += this.directionY;
         this.draw();
@@ -91,8 +94,8 @@ class connectorDots {
 }
 function makeDots() {
     dotsArray = [];
-    let numberOfDots = (canvas.width * canvas.height) / 8000;
-    for (let i = 0; i < numberOfDots; i++) {
+    let numberOfDots = (canvas.width * canvas.height) / 25000;
+    for (let i = 0; i < numberOfDots / 8; i++) {
         let size = Math.floor(Math.random() * 5) + 1;
         let x = (Math.random() * (innerWidth - size * 2));
         let y = (Math.random() * (innerHeight - size * 2));
@@ -110,8 +113,8 @@ function dotJoin() {
         for (let b = a; b < dotsArray.length; b++) {
             let distance = ((dotsArray[a].x - dotsArray[b].x) * (dotsArray[a].x - dotsArray[b].x)) +
                 ((dotsArray[a].y - dotsArray[b].y) * (dotsArray[a].y - dotsArray[b].y));
-            if (distance < (canvas.width / 3) * (canvas.height / 3)) {
-                lineOpacity = 1 - (distance / 10000)
+            if (distance < (canvas.width) * (canvas.height)) {
+                lineOpacity = 1
                 context.strokeStyle = 'rgb(252, 252, 252, ' + lineOpacity + ')';
                 context.lineWidth = 1;
                 context.beginPath();
