@@ -1,0 +1,34 @@
+.projectContainer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 100%;
+    .projectBox {
+    padding: 25px;
+    margin: 25px;
+    border-radius:4pz;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 5px solid red;
+    img {
+        width: 100%;
+        border-radius: 4px;
+        margin: 0 auto 20px auto;
+    }
+}
+}
+.projectOne{
+    transform: translateX(500);
+}
+.projectTwo{
+    transform: translateX(-500);
+}
+.projectThree{
+    transform: translateX(500);
+}
+.projectFour{
+    transform: translateX(-500);
+}

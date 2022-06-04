@@ -1,0 +1,44 @@
+.skills{
+    background-color: $secondaryColor;
+}
+
+.skillsInfo{
+    padding: 60px;
+    h2{
+        margin: 0 auto;
+        text-align: center;
+        padding-bottom: 40px;
+        text-transform: uppercase;
+    }
+    ul{
+        display:flex;
+        justify-content: space-evenly;
+        padding: 0px;
+    }    
+}
+
+.skillItem{
+    font-size: 2rem;
+    i{
+        display: block;
+        text-align: center;
+        font-size: 3rem;
+    }
+    p{
+        color: $secondaryColor;
+        display: block;
+        font-size: 1rem;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+.skillItem:hover,
+.skillItem:focus{
+    .skillIcon{
+    color: $fithColor;
+    }
+    .skillName{
+        color: $fithColor;
+    }
+}

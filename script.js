@@ -1,15 +1,26 @@
 const menuButton = document.querySelector('.menuButton');
-const popUpMenu = document.querySelector('.popUpMenu')
-
+const popUpMenu = document.querySelector('.popUpMenu');
+const skillItem = document.querySelectorAll('.skillItem');
+const skillName = document.querySelectorAll('.skillName')
 menuButton.addEventListener('click', () => {
     if (popUpMenu.style.display === 'block') {
         popUpMenu.style.display = 'none'
     } else {
         popUpMenu.style.display = 'block'
     }
-})
+});
 
-
+// skillItem.forEach((skill) => {
+//     skill.addEventListener('mouseover', (e) => {
+//         e.target.style.color = 'white'
+//     });
+// });
+// skillItem.forEach((skill) => {
+//     skill.addEventListener('mouseout', (e) => {
+//         skillItem.style.color = 'black'
+//         e.skillName.style.color = 'black'
+//     });
+// });
 
 
 
@@ -20,11 +31,11 @@ const canvas = document.querySelector('#canvas');
 const context = canvas.getContext('2d');
 
 canvas.width = window.innerWidth;
-canvas.height = window.innerHeight
+canvas.height = window.innerHeight;
 window.addEventListener('resize', (e) => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    radius: (canvas.height / 90) * (canvas.width / 90)
+    // radius: (canvas.height / 90) * (canvas.width / 90)
     makeDots();
 });
 window.addEventListener('mouseout', () => {
@@ -35,7 +46,7 @@ window.addEventListener('mouseout', () => {
 let mouse = {
     x: null,
     y: null,
-    // radius: (canvas.height / 99) * (canvas.width / 99)
+    radius: (canvas.height / 90) * (canvas.width / 90)
 }
 window.addEventListener('mousemove', (e) => {
     mouse.x = e.x;
@@ -60,7 +71,7 @@ class connectorDots {
         if (this.x > canvas.width || this.x < 0) {
             this.directionX = -this.directionX
         }
-        if (this.y > canvas.width || this.y < 0) {
+        if (this.y > canvas.height || this.y < 0) {
             this.directionY = -this.directionY
         }
 
@@ -83,9 +94,7 @@ class connectorDots {
         //             this.y -= 10;
         //         }
         //     }
-        //     this.x += this.directionX;
-        //     this.y += this.directionY;
-        //     this.draw();
+
         // })
         this.x += this.directionX;
         this.y += this.directionY;
@@ -94,9 +103,11 @@ class connectorDots {
 }
 function makeDots() {
     dotsArray = [];
-    let numberOfDots = (canvas.width * canvas.height) / 25000;
-    for (let i = 0; i < numberOfDots / 8; i++) {
-        let size = Math.floor(Math.random() * 5) + 1;
+    // let numberOfDots = (canvas.width * canvas.height) / 25000;
+    let numberOfDots = 10;
+    for (let i = 0; i < numberOfDots; i++) {
+        // let size = Math.floor(Math.random() * 5) + 1;
+        let size = 3;
         let x = (Math.random() * (innerWidth - size * 2));
         let y = (Math.random() * (innerHeight - size * 2));
         let directionX = (Math.random() * 5) - 2.5;
@@ -113,7 +124,7 @@ function dotJoin() {
         for (let b = a; b < dotsArray.length; b++) {
             let distance = ((dotsArray[a].x - dotsArray[b].x) * (dotsArray[a].x - dotsArray[b].x)) +
                 ((dotsArray[a].y - dotsArray[b].y) * (dotsArray[a].y - dotsArray[b].y));
-            if (distance < (canvas.width) * (canvas.height)) {
+            if (distance < (canvas.width / 1.5) * (canvas.height / 1.5)) {
                 lineOpacity = 1
                 context.strokeStyle = 'rgb(252, 252, 252, ' + lineOpacity + ')';
                 context.lineWidth = 1;
@@ -140,3 +151,36 @@ function moveDots() {
 makeDots();
 moveDots();
 // HEADER BACKGROUND END
+
+
+// projects slide in
+const projectBox = document.querySelectorAll('.projectBox')
+
+function debounce(func, wait = 20, immediate = true) {
+    let timeout;
+    return function () {
+        let context = this, args = arguments;
+        let later = function () {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        let callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
+};
+function scrollIn(e) {
+    projectBox.forEach(project => {
+        const scrollInAt = (window.scrollY + window.innerHeight) - project.height / 2;
+        const projectBottom = projectBox.offsetTop + projectBox.height;
+        const showProject = scrollInAt > projectBox.offsetTop;
+        const scrollToFar = window.scrollY < projectBottom
+        if (showProject && scrollToFar) {
+            projectBox.classList.add('active')
+        } else {
+            project.classList.remove('active')
+        }
+    })
+};
+window.addEventListener('scroll', debounce(scrollIn));

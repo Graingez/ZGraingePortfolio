@@ -37,13 +37,13 @@ nav{
     .navMenu{
         width: 90%;
     }
-    .dropDown{
-        // display: none;
+    #mobileMenu{
         color: $fithColor;
-        display: block;
         font-size: 2rem;
+
         .menuButton{
             display: none;
+            // visibility: hidden;
             text-decoration: none;
             color: $fithColor;
         }
@@ -91,7 +91,15 @@ nav a:active{
     .listMenu{
         display: none;
     }
-    .menuButton{
-        display: block;
+    
+    .navBar #mobileMenu .menuButton{
+        // visibility: visible;
+        display:inline-block;
+        
+    }
+}
+@media( min-width: 650px){
+    .navBar div .popUpMenu{
+        display: none;
     }
 }
