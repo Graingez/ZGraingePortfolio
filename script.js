@@ -10,20 +10,6 @@ menuButton.addEventListener('click', () => {
     }
 });
 
-// skillItem.forEach((skill) => {
-//     skill.addEventListener('mouseover', (e) => {
-//         e.target.style.color = 'white'
-//     });
-// });
-// skillItem.forEach((skill) => {
-//     skill.addEventListener('mouseout', (e) => {
-//         skillItem.style.color = 'black'
-//         e.skillName.style.color = 'black'
-//     });
-// });
-
-
-
 
 
 // HEADER BACKGROUND

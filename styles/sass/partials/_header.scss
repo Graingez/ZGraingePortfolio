@@ -1,10 +1,10 @@
 header{
     height: 100vh;
-    background-color: $secondaryColor;
+    // background-color: $secondaryColor;
+    background-color: rgba(22,180,233,1);
     position: relative;
     color: $fithColor;
-    background-size: cover ;
-    background-repeat: no-repeat;
+    
     ul{
         display: flex;
         flex-direction: row;
@@ -18,7 +18,7 @@ header{
     transform: translate(-50%, -50%);
     width: 60%;
     height: 60%;  
-    background:$secondaryColor;
+    background-color: rgba(22,180,233,1);
 }
 .canvasBox{
     width: 60%;
@@ -31,7 +31,7 @@ header{
     left: 0;
     right: 0;
     width: 40%;
-    background-color: rgba(2, 17, 27, .8);
+    // background-color: rgba(2, 17, 27, .8);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,6 +47,8 @@ header{
     }
     h3{
         text-transform: uppercase;
+        animation: show 5s ease-in;
+        font-size: 2rem;
     }
 
     ul{
@@ -57,6 +59,7 @@ header{
         a{
             color: $fithColor;
             font-size: 2rem;
+            animation:spin 2s ease-in;
         }
     }
     
@@ -66,3 +69,128 @@ header{
     color: orangered;
     cursor: pointer;
 }
+.name{
+    display: flex;
+}
+.nameLetter{
+    font-size: 5rem;
+    text-transform: uppercase;
+}
+.nameLetter:hover{
+    color: yellow;
+}
+@for $letter from 1 through 12{
+  .nameLetter:nth-of-type(#{$letter}){
+    animation:letterBounce 1s #{$letter * 0.3}s both;
+  }
+} 
+
+@keyframes letterBounce {
+  0% {
+            transform: translateY(-500px);
+    opacity: 0;
+  }
+  40% {
+            transform: translateY(0);
+    opacity: 1;
+    color: yellow;
+  }
+  55% {
+            transform: translateY(-65px);
+  }
+  70% {
+            transform: translateY(0);
+            color: red;
+  }
+  80% {
+            transform: translateY(-30px);
+  }
+  90% {
+            transform: translateY(0);  
+            color: orangered;
+  }
+  95% {
+        transform: translateY(-5px);
+  }
+  100% {
+        transform: translateY(0);
+        color: white;
+  }
+}
+
+@keyframes grow{
+    0%{
+        font-size: 0rem;
+        color: red;
+    }
+    40%{
+        color: orangered;
+    }
+    60%{
+        color: orange;
+    }
+    80%{
+        color: yellow;
+    }
+    100%{
+        font-size: 2rem;
+    }
+}
+
+
+@keyframes show{
+    0% {
+            transform: translatex(800px);
+    opacity: 0;
+  }
+  40% {
+            transform: translatex(0);
+    opacity: .4;
+  }
+  
+  100%{
+       transform: translatex(0);
+    opacity: 1;
+  }
+}
+@keyframes iconBounce {
+  0% {
+            transform: translateY(500px);
+    opacity: 0;
+  }
+  40% {
+            transform: translateY(0);
+    opacity: 1;
+  }
+  55% {
+            transform: translateY(-65px);
+  }
+  70% {
+            transform: translateY(0);
+  }
+  80% {
+            transform: translateY(-30px);
+  }
+  90% {
+            transform: translateY(0);  
+  }
+  95% {
+        transform: translateY(-5px);
+  }
+  100% {
+        transform: translateY(0);
+  }
+}
+@for $icon from 1 through 2{
+  .icon:nth-of-type(#{$icon}){
+    animation:spin 2s #{$icon* 0.6}s ease-in;
+  }
+} 
+ @keyframes spin { 
+        0% { 
+            transform: rotate(0deg); 
+        } 
+        100% { 
+            transform: rotate(360deg); 
+        }
+    }
