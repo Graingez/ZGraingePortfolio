@@ -30,8 +30,7 @@ header{
     top: 40%;
     left: 0;
     right: 0;
-    width: 40%;
-    // background-color: rgba(2, 17, 27, .8);
+    width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,7 +39,7 @@ header{
     border-radius: 10px;
     text-align: center;
     h1{
-        font-size: 2rem;
+        font-size: 4rem;
         margin: 0;
         opacity: 1;
         text-transform: uppercase;
@@ -48,14 +47,16 @@ header{
     h3{
         text-transform: uppercase;
         animation: show 5s ease-in;
-        font-size: 2rem;
+        font-size: 1.5rem;
+        margin: 0;
     }
 
     ul{
-        padding-left: 0;
         margin: 0;
+        margin-top: 40px;
+        padding-left: 0;
         display:flex;
-        gap: 25px;
+        gap:25px;
         a{
             color: $fithColor;
             font-size: 2rem;
@@ -63,6 +64,9 @@ header{
         }
     }
     
+}
+.icon{
+    animation:spin 2s ease-in;
 }
 .nameBox a:hover,
 .nameBox a:focus{
@@ -73,25 +77,25 @@ header{
     display: flex;
 }
 .nameLetter{
-    font-size: 5rem;
+    font-size: 4rem;
     text-transform: uppercase;
 }
-.nameLetter:hover{
-    color: yellow;
-}
 @for $letter from 1 through 12{
-  .nameLetter:nth-of-type(#{$letter}){
-    animation:letterBounce 1s #{$letter * 0.3}s both;
+    .nameLetter:nth-of-type(#{$letter}){
+        animation:letterBounce 1.2s #{$letter * 0.3}s both;
   }
 } 
 
+.nameLetter:hover{
+    color: yellow;
+}
 @keyframes letterBounce {
-  0% {
-            transform: translateY(-500px);
-    opacity: 0;
-  }
-  40% {
-            transform: translateY(0);
+    0% {
+        transform: translateY(-500px);
+        opacity: 0;
+    }
+    40% {
+        transform: translateY(0);
     opacity: 1;
     color: yellow;
   }
@@ -110,7 +114,7 @@ header{
             color: orangered;
   }
   95% {
-        transform: translateY(-5px);
+        transform: translateY(-10px);
   }
   100% {
         transform: translateY(0);
@@ -136,7 +140,6 @@ header{
         font-size: 2rem;
     }
 }
-
 
 @keyframes show{
     0% {
@@ -194,3 +197,20 @@ header{
             transform: rotate(360deg); 
         }
     }
+
+@media (max-width: 650px){
+    .nameLetter{
+        font-size: 3rem;
+    }
+    .nameBox h3{
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 460px){
+    .nameLetter{
+        font-size: 2rem;
+    }
+    .nameBox h3{
+        font-size: 1rem;
+    }
+}

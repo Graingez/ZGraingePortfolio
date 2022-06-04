@@ -139,34 +139,23 @@ moveDots();
 // HEADER BACKGROUND END
 
 
-// projects slide in
-const projectBox = document.querySelectorAll('.projectBox')
+// skills slide in
 
-function debounce(func, wait = 20, immediate = true) {
-    let timeout;
-    return function () {
-        let context = this, args = arguments;
-        let later = function () {
-            timeout = null;
-            if (!immediate) func.apply(context, args);
-        };
-        let callNow = immediate && !timeout;
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-        if (callNow) func.apply(context, args);
-    };
-};
-function scrollIn(e) {
-    projectBox.forEach(project => {
-        const scrollInAt = (window.scrollY + window.innerHeight) - project.height / 2;
-        const projectBottom = projectBox.offsetTop + projectBox.height;
-        const showProject = scrollInAt > projectBox.offsetTop;
-        const scrollToFar = window.scrollY < projectBottom
-        if (showProject && scrollToFar) {
-            projectBox.classList.add('active')
+
+function scrollIn() {
+    let skillScroll = document.querySelectorAll(".scrollIn");
+
+    for (let i = 0; i < skillScroll.length; i++) {
+        let windowHeight = window.innerHeight;
+        let elementTop = skillScroll[i].getBoundingClientRect().top;
+        let elementVisible = 150;
+
+        if (elementTop < windowHeight - elementVisible) {
+            skillScroll[i].classList.add("active");
         } else {
-            project.classList.remove('active')
+            skillScroll[i].classList.remove("active");
         }
-    })
-};
-window.addEventListener('scroll', debounce(scrollIn));
+    }
+}
+
+window.addEventListener("scroll", scrollIn);

@@ -1,5 +1,6 @@
 .skills{
     background-color: $fourthColor;
+    height: 40vh;
 }
 
 .skillsInfo{
@@ -19,13 +20,14 @@
 
 .skillItem{
     font-size: 2rem;
+    width: 20%;
     i{
         display: block;
         text-align: center;
-        font-size: 3rem;
+        font-size: 4rem;
     }
     p{
-        color: $secondaryColor;
+        color: $fourthColor;
         display: block;
         font-size: 1rem;
         text-align: center;
@@ -42,3 +44,23 @@
         color: $fithColor;
     }
 }
+@media (max-width: 650px){
+    .skillItem i{
+        font-size: 2.5rem;
+    }
+    .skillItem p{
+        font-size: .8rem;
+    }
+}
+
+.scrollIn{
+  position: relative;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 2s all ease;
+}
+.scrollIn.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
