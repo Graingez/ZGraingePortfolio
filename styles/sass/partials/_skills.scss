@@ -3,18 +3,19 @@
     height: 100%;
     font-family: $primaryFont;
 }
-
 .skillsInfo{
-    padding: 60px;
+    padding: 100px 40px;
+    
     h2{
         margin: 0 auto;
         text-align: center;
         padding-bottom: 40px;
         text-transform: uppercase;
     }
-    ul{
+    .skillList{
         display:flex;
         justify-content: space-evenly;
+        margin: 0px;
         padding: 0px;
     }    
 }
@@ -22,6 +23,7 @@
 .skillItem{
     font-size: 2rem;
     width: 20%;
+    
     i{
         display: block;
         text-align: center;
@@ -46,7 +48,23 @@
         color: $fithColor;
     }
 }
+
+.scrollIn{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 2s all ease;
+}
+.scrollIn.active{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
 @media (max-width: 650px){
+    .skillsInfo{
+        padding: 100px 0px;
+    }
     .skillItem i{
         font-size: 2.5rem;
     }
@@ -54,15 +72,3 @@
         font-size: .8rem;
     }
 }
-
-.scrollIn{
-  position: relative;
-  transform: translateY(100px);
-  opacity: 0;
-  transition: 2s all ease;
-}
-.scrollIn.active{
-  transform: translateY(0);
-  opacity: 1;
-}
-

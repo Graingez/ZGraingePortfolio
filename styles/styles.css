@@ -849,20 +849,25 @@ header ul {
     font-size: 1rem;
   }
 }
+@media (max-width: 460px) {
+  #canvas {
+    display: none;
+  }
+}
 .aboutMe {
   background-color: #02111b;
   color: #FCFCFC;
-  padding: 60px auto;
   height: 100%;
 }
 
 .aboutInfo {
-  padding: 60px;
+  padding: 100px;
 }
 .aboutInfo h2 {
   font-family: "Cinzel", serif;
   text-transform: uppercase;
   margin: 0;
+  padding-bottom: 30px;
 }
 .aboutInfo p {
   font-family: "Cuprum", sans-serif;
@@ -870,6 +875,21 @@ header ul {
   margin: 0;
 }
 
+@media (max-width: 800px) {
+  .aboutInfo {
+    padding: 50px 60px;
+  }
+}
+@media (max-width: 500px) {
+  .aboutInfo {
+    padding: 50px 40px;
+  }
+}
+@media (max-width: 400px) {
+  .aboutInfo {
+    padding: 50px 5px;
+  }
+}
 .skills {
   background-color: rgb(22, 180, 233);
   height: 100%;
@@ -877,7 +897,7 @@ header ul {
 }
 
 .skillsInfo {
-  padding: 60px;
+  padding: 100px 40px;
 }
 .skillsInfo h2 {
   margin: 0 auto;
@@ -885,13 +905,14 @@ header ul {
   padding-bottom: 40px;
   text-transform: uppercase;
 }
-.skillsInfo ul {
+.skillsInfo .skillList {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  margin: 0px;
   padding: 0px;
 }
 
@@ -922,19 +943,10 @@ header ul {
   color: #FCFCFC;
 }
 
-@media (max-width: 650px) {
-  .skillItem i {
-    font-size: 2.5rem;
-  }
-
-  .skillItem p {
-    font-size: 0.8rem;
-  }
-}
 .scrollIn {
   position: relative;
-  -webkit-transform: translateY(100px);
-          transform: translateY(100px);
+  -webkit-transform: translateY(150px);
+          transform: translateY(150px);
   opacity: 0;
   -webkit-transition: 2s all ease;
   transition: 2s all ease;
@@ -946,6 +958,19 @@ header ul {
   opacity: 1;
 }
 
+@media (max-width: 650px) {
+  .skillsInfo {
+    padding: 100px 0px;
+  }
+
+  .skillItem i {
+    font-size: 2.5rem;
+  }
+
+  .skillItem p {
+    font-size: 0.8rem;
+  }
+}
 .projects {
   background-color: #02111b;
 }
@@ -1028,4 +1053,20 @@ header ul {
   -webkit-transform: translateX(0);
           transform: translateX(0);
   opacity: 1;
+}
+
+@media (max-width: 700px) {
+  .projectContainer .projectBox {
+    width: 60%;
+  }
+}
+@media (max-width: 500px) {
+  .projectContainer .projectBox {
+    width: 80%;
+  }
+}
+@media (max-width: 400px) {
+  .projectContainer .projectBox {
+    width: 100%;
+  }
 }
