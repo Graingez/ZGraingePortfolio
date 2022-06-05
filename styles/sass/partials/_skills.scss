@@ -1,6 +1,7 @@
 .skills{
     background-color: $fourthColor;
-    height: 40vh;
+    height: 100%;
+    font-family: $primaryFont;
 }
 
 .skillsInfo{
@@ -27,6 +28,7 @@
         font-size: 4rem;
     }
     p{
+        font-family: $secondayFont;
         color: $fourthColor;
         display: block;
         font-size: 1rem;

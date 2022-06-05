@@ -2,17 +2,20 @@
     background-color: $primaryColor;
     color: $fithColor;
     padding: 60px auto;
-    height: 40vh;
+    height: 100%;
     
 }
 .aboutInfo{
     padding: 60px;
 h2{
+    font-family: $primaryFont;
     text-transform: uppercase;
     margin: 0;
     
 }
 p{
+    font-family: $secondayFont;
+    line-height: 1.4;
     margin: 0;
 }
 }

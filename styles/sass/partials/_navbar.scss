@@ -7,6 +7,8 @@ nav{
     top: 0;
     left: 0;
     border-bottom: 2px solid $fourthColor;
+    font-family: $primaryFont;
+    font-weight: 600;
     ul{
         display: flex;
         gap: 4%;

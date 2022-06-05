@@ -250,6 +250,7 @@ html {
 
 html {
   font-size: 125%;
+  line-height: 1.25;
 }
 
 .wrapper {
@@ -277,6 +278,8 @@ nav {
   top: 0;
   left: 0;
   border-bottom: 2px solid rgb(22, 180, 233);
+  font-family: "Cinzel", serif;
+  font-weight: 600;
 }
 nav ul {
   display: -webkit-box;
@@ -850,23 +853,27 @@ header ul {
   background-color: #02111b;
   color: #FCFCFC;
   padding: 60px auto;
-  height: 40vh;
+  height: 100%;
 }
 
 .aboutInfo {
   padding: 60px;
 }
 .aboutInfo h2 {
+  font-family: "Cinzel", serif;
   text-transform: uppercase;
   margin: 0;
 }
 .aboutInfo p {
+  font-family: "Cuprum", sans-serif;
+  line-height: 1.4;
   margin: 0;
 }
 
 .skills {
   background-color: rgb(22, 180, 233);
-  height: 40vh;
+  height: 100%;
+  font-family: "Cinzel", serif;
 }
 
 .skillsInfo {
@@ -898,6 +905,7 @@ header ul {
   font-size: 4rem;
 }
 .skillItem p {
+  font-family: "Cuprum", sans-serif;
   color: rgb(22, 180, 233);
   display: block;
   font-size: 1rem;
@@ -938,6 +946,15 @@ header ul {
   opacity: 1;
 }
 
+.projects {
+  background-color: #02111b;
+}
+.projects h2 {
+  margin: 0px;
+  color: white;
+  font-family: "Cinzel", serif;
+}
+
 .projectContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -965,30 +982,50 @@ header ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 5px solid red;
+  border: 5px solid #FCFCFC;
+  background-color: rgb(22, 180, 233);
+  color: #FCFCFC;
 }
 .projectContainer .projectBox img {
   width: 100%;
   border-radius: 4px;
   margin: 0 auto 20px auto;
 }
-
-.projectOne {
-  -webkit-transform: translateX(500);
-          transform: translateX(500);
+.projectContainer .projectBox h4 {
+  color: white;
+  font-family: "Cinzel", serif;
+  margin: 0px;
+}
+.projectContainer .projectBox p {
+  font-family: "Cuprum", sans-serif;
 }
 
-.projectTwo {
-  -webkit-transform: translateX(-500);
-          transform: translateX(-500);
+.scrollInLeft {
+  position: relative;
+  -webkit-transform: translateX(-150px);
+          transform: translateX(-150px);
+  opacity: 0;
+  -webkit-transition: 2s all ease;
+  transition: 2s all ease;
 }
 
-.projectThree {
-  -webkit-transform: translateX(500);
-          transform: translateX(500);
+.scrollInLeft.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
 }
 
-.projectFour {
-  -webkit-transform: translateX(-500);
-          transform: translateX(-500);
+.scrollInRight {
+  position: relative;
+  -webkit-transform: translateX(150px);
+          transform: translateX(150px);
+  opacity: 0;
+  -webkit-transition: 2s all ease;
+  transition: 2s all ease;
+}
+
+.scrollInRight.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
 }

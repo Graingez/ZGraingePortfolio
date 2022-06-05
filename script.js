@@ -159,3 +159,39 @@ function scrollIn() {
 }
 
 window.addEventListener("scroll", scrollIn);
+
+function scrollInLeft() {
+    let skillScroll = document.querySelectorAll(".scrollInLeft");
+
+    for (let i = 0; i < skillScroll.length; i++) {
+        let windowHeight = window.innerHeight;
+        let elementTop = skillScroll[i].getBoundingClientRect().top;
+        let elementVisible = 150;
+
+        if (elementTop < windowHeight - elementVisible) {
+            skillScroll[i].classList.add("active");
+        } else {
+            skillScroll[i].classList.remove("active");
+        }
+    }
+}
+
+window.addEventListener("scroll", scrollInLeft);
+
+function scrollInRight() {
+    let skillScroll = document.querySelectorAll(".scrollInRight");
+
+    for (let i = 0; i < skillScroll.length; i++) {
+        let windowHeight = window.innerHeight;
+        let elementTop = skillScroll[i].getBoundingClientRect().top;
+        let elementVisible = 150;
+
+        if (elementTop < windowHeight - elementVisible) {
+            skillScroll[i].classList.add("active");
+        } else {
+            skillScroll[i].classList.remove("active");
+        }
+    }
+}
+
+window.addEventListener("scroll", scrollInRight);
