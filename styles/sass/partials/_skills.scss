@@ -4,7 +4,7 @@
     font-family: $primaryFont;
 }
 .skillsInfo{
-    padding: 100px 40px;
+    padding: 100px 10%;
     
     h2{
         margin: 0 auto;
@@ -53,7 +53,7 @@
     position: relative;
     transform: translateY(150px);
     opacity: 0;
-    transition: 2s all ease;
+    transition: 1.5s all ease;
 }
 .scrollIn.active{
     transform: translateY(0);
@@ -61,7 +61,7 @@
 }
 
 
-@media (max-width: 650px){
+@media (max-width: 700px){
     .skillsInfo{
         padding: 100px 0px;
     }

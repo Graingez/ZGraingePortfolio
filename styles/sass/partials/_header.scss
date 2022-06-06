@@ -1,7 +1,7 @@
 header{
     height: 100vh;
     // background-color: $secondaryColor;
-    background-color: rgba(22,180,233,1);
+    background-color: $fourthColor;
     position: relative;
     color: $fithColor;
     
@@ -18,7 +18,7 @@ header{
     transform: translate(-50%, -50%);
     width: 60%;
     height: 60%;  
-    background-color: rgba(22,180,233,1);
+    background-color: $fourthColor;
 }
 .canvasBox{
     width: 60%;
@@ -46,7 +46,7 @@ header{
     }
     h3{
         text-transform: uppercase;
-        animation: show 5s ease-in;
+        animation: show 3s ease-in;
         font-size: 1.5rem;
         margin: 0;
     }
@@ -60,7 +60,7 @@ header{
         a{
             color: $fithColor;
             font-size: 2rem;
-            animation:spin 2s ease-in;
+            animation:spin 1.5s ease-in;
         }
     }
     
@@ -82,7 +82,7 @@ header{
 }
 @for $letter from 1 through 12{
     .nameLetter:nth-of-type(#{$letter}){
-        animation:letterBounce 1.2s #{$letter * 0.3}s both;
+        animation:letterBounce 1s #{$letter * 0.15}s both;
   }
 } 
 
@@ -97,21 +97,21 @@ header{
     40% {
         transform: translateY(0);
     opacity: 1;
-    color: yellow;
+    color: red;
   }
   55% {
             transform: translateY(-65px);
   }
   70% {
             transform: translateY(0);
-            color: red;
+            color: orangered;
   }
   80% {
             transform: translateY(-30px);
   }
   90% {
             transform: translateY(0);  
-            color: orangered;
+            color: yellow;
   }
   95% {
         transform: translateY(-10px);
@@ -148,12 +148,14 @@ header{
   }
   40% {
             transform: translatex(0);
-    opacity: .4;
+    opacity: .6;
+    
   }
   
   100%{
        transform: translatex(0);
     opacity: 1;
+    
   }
 }
 @keyframes iconBounce {

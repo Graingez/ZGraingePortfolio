@@ -1,5 +1,6 @@
 .projects{
     background-color: $primaryColor;
+    padding: 100px 0px;
     h2{
         margin: 0px;
         color: white;
@@ -16,7 +17,6 @@
     .projectBox {
     padding: 25px;
     margin: 25px;
-    border-radius:4pz;
     width: 40%;
     display: flex;
     flex-direction: column;
@@ -39,35 +39,54 @@
     }
 }
 }
-
-
-
+    
+    .projectLinks{
+        a{
+        text-decoration: none;
+        color: white;
+        border: 2px solid $secondaryColor;
+        background-color: $secondaryColor;
+        padding: 10px 20px;
+        border-radius: 5px;
+        }
+    }
+.projectLinks a:hover,
+.projectLinks a:focus{
+    background-color: $tertiaryColor;
+}
+.projectLinks a:active{
+    border: 2px solid $fithColor;
+}
+.projectBox:hover,
+.projectBox:focus{
+        transform: scale(1.2);
+    }
 .scrollInLeft{
-  position: relative;
-  transform: translateX(-150px);
-  opacity: 0;
-  transition: 2s all ease;
+    position: relative;
+    transform: translateX(-150px);
+    opacity: 0;
+    transition: 2s all ease;
 }
 .scrollInLeft.active{
-  transform: translateX(0);
-  opacity: 1;
+    transform: translateX(0);
+    opacity: 1;
 }
 .scrollInRight{
-  position: relative;
-  transform: translateX(150px);
-  opacity: 0;
-  transition: 2s all ease;
+    position: relative;
+    transform: translateX(150px);
+    opacity: 0;
+    transition: 2s all ease;
 }
 .scrollInRight.active{
-  transform: translateX(0);
-  opacity: 1;
+    transform: translateX(0);
+    opacity: 1;
 }
 
 
 @media (max-width: 700px){
         .projectContainer{
         .projectBox{
-            width: 60%;
+            width: 70%;
         }
     }
 }

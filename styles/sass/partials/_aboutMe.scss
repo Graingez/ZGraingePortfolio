@@ -5,7 +5,7 @@
     
 }
 .aboutInfo{
-    padding: 100px;
+    padding: 100px 10%;
 h2{
     font-family: $primaryFont;
     text-transform: uppercase;
@@ -18,20 +18,4 @@ p{
     line-height: 1.4;
     margin: 0;
 }
-}
-
-@media (max-width: 800px){
-    .aboutInfo{
-        padding: 50px 60px;
-    }
-}
-@media (max-width: 500px){
-    .aboutInfo{
-        padding: 50px 40px;
-    }
-}
-@media (max-width: 400px){
-    .aboutInfo{
-        padding:  50px 5px;
-    }
 }

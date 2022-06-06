@@ -148,7 +148,7 @@ function scrollIn() {
     for (let i = 0; i < skillScroll.length; i++) {
         let windowHeight = window.innerHeight;
         let elementTop = skillScroll[i].getBoundingClientRect().top;
-        let elementVisible = 150;
+        let elementVisible = 50;
 
         if (elementTop < windowHeight - elementVisible) {
             skillScroll[i].classList.add("active");
