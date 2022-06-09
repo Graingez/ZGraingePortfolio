@@ -287,11 +287,12 @@ nav ul {
   display: flex;
   gap: 4%;
   color: #FCFCFC;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  margin: 0;
-  padding-right: 5%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin: 0 auto;
   padding: 0;
 }
 nav ul a {
@@ -320,6 +321,8 @@ nav ul a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .navBar .navMenu {
   width: 90%;
