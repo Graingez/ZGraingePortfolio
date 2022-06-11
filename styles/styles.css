@@ -485,6 +485,12 @@ header ul {
   font-size: 1.5rem;
   margin: 0;
 }
+.nameBox .headTop::before {
+  content: open-quote;
+}
+.nameBox .headBottom::after {
+  content: close-quote;
+}
 .nameBox ul {
   margin: 0;
   margin-top: 40px;
@@ -499,11 +505,6 @@ header ul {
   font-size: 2rem;
   -webkit-animation: spin 1.5s ease-in;
           animation: spin 1.5s ease-in;
-}
-
-.icon {
-  -webkit-animation: spin 2s ease-in;
-          animation: spin 2s ease-in;
 }
 
 .nameBox a:hover,
@@ -706,8 +707,8 @@ header ul {
 }
 @-webkit-keyframes show {
   0% {
-    -webkit-transform: translatex(800px);
-            transform: translatex(800px);
+    -webkit-transform: translatey(150px);
+            transform: translatey(150px);
     opacity: 0;
   }
   40% {
@@ -723,8 +724,8 @@ header ul {
 }
 @keyframes show {
   0% {
-    -webkit-transform: translatex(800px);
-            transform: translatex(800px);
+    -webkit-transform: translatey(150px);
+            transform: translatey(150px);
     opacity: 0;
   }
   40% {
@@ -810,16 +811,6 @@ header ul {
             transform: translateY(0);
   }
 }
-.icon:nth-of-type(1) {
-  -webkit-animation: spin 2s 0.6s ease-in;
-          animation: spin 2s 0.6s ease-in;
-}
-
-.icon:nth-of-type(2) {
-  -webkit-animation: spin 2s 1.2s ease-in;
-          animation: spin 2s 1.2s ease-in;
-}
-
 @-webkit-keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
@@ -830,7 +821,6 @@ header ul {
             transform: rotate(360deg);
   }
 }
-
 @keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
@@ -871,58 +861,159 @@ header ul {
 }
 
 .aboutInfo {
-  padding: 100px 10%;
+  height: 100vh;
+  padding-top: 100px;
 }
 .aboutInfo h2 {
   font-family: "Cinzel", serif;
   text-transform: uppercase;
   margin: 0;
   padding-bottom: 30px;
+  text-align: center;
 }
-.aboutInfo p {
+
+.aboutContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 80%;
+  gap: 5%;
+}
+
+.aboutText {
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+  height: 100%;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5%;
+}
+.aboutText p {
   font-family: "Cuprum", sans-serif;
-  line-height: 1.4;
+  line-height: 1.6;
   margin: 0;
 }
 
+.aboutPhoto {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  width: 80%;
+}
+
+.zachPhoto {
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+@media (max-width: 900px) {
+  .aboutText p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 800px) {
+  .aboutContent {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .aboutPhoto {
+    padding-top: 20px;
+    width: 50%;
+  }
+}
+@media (max-width: 500px) {
+  .aboutText p {
+    font-size: 0.7rem;
+  }
+}
 .skills {
-  background-color: rgb(22, 180, 233);
-  height: 100%;
+  background-color: darkgrey;
+  height: 60vh;
   font-family: "Cinzel", serif;
 }
 
 .skillsInfo {
-  padding: 100px 10%;
+  padding-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20%;
 }
 .skillsInfo h2 {
   margin: 0 auto;
   text-align: center;
-  padding-bottom: 40px;
   text-transform: uppercase;
 }
 .skillsInfo .skillList {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  gap: 20%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0px;
   padding: 0px;
 }
 
+.topStack,
+.bottomStack {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5%;
+  padding-top: 50px;
+}
+
 .skillItem {
-  font-size: 2rem;
-  width: 20%;
+  font-size: 3rem;
+  width: 15%;
 }
 .skillItem i {
   display: block;
   text-align: center;
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 .skillItem p {
   font-family: "Cuprum", sans-serif;
-  color: rgb(22, 180, 233);
+  color: darkgrey;
   display: block;
   font-size: 1rem;
   text-align: center;
@@ -954,10 +1045,6 @@ header ul {
 }
 
 @media (max-width: 700px) {
-  .skillsInfo {
-    padding: 100px 0px;
-  }
-
   .skillItem i {
     font-size: 2.5rem;
   }
@@ -1088,4 +1175,42 @@ header ul {
   .projectContainer .projectBox {
     width: 100%;
   }
+}
+.contact {
+  background-color: rgb(22, 180, 233);
+  height: 30vh;
+  text-align: center;
+  padding-top: 50px;
+  color: #FCFCFC;
+  text-transform: uppercase;
+}
+
+.contactBox h2 {
+  padding-top: 20px;
+  margin: 0;
+}
+
+.contactLinks {
+  padding-top: 30px;
+  padding: 0px;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10%;
+}
+
+.email {
+  color: white;
+  text-decoration: underline;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.icon {
+  font-size: 3rem;
+  color: white;
 }

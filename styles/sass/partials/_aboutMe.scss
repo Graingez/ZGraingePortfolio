@@ -5,17 +5,75 @@
     
 }
 .aboutInfo{
-    padding: 100px 10%;
+    height: 100vh;
+    padding-top: 100px ;
+    
 h2{
     font-family: $primaryFont;
     text-transform: uppercase;
     margin: 0;
     padding-bottom: 30px;
+    text-align: center;
     
 }
-p{
-    font-family: $secondayFont;
-    line-height: 1.4;
-    margin: 0;
 }
+.aboutContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 80%;
+    gap: 5%;
+    // .aboutPhoto{
+        
+        // }
+    }
+    .aboutText{
+        flex-basis: 60%;
+        height: 100%;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 5%;
+        p{
+            font-family: $secondayFont;
+            line-height: 1.6;
+            margin: 0;
+            // font-size: 1rem;
+        }
+
+}
+.aboutPhoto{
+    flex-basis: 40%;
+    width: 80%;
+
+}
+.zachPhoto{
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+@media(max-width:900px){
+    .aboutText{
+        p{
+            font-size: 1rem;
+        }
+    }
+}
+@media(max-width:800px){
+    .aboutContent{
+        flex-direction: column;
+    }
+    .aboutPhoto{
+        padding-top: 20px;
+        width: 50%;
+    }
+}
+@media(max-width:500px){
+    .aboutText p{
+        font-size: .7rem;
+    }
 }

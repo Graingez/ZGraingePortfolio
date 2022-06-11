@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Cuprum&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <link rel="stylesheet" href="./styles/styles.css">
     <script src="https://kit.fontawesome.com/db9529a862.js" crossorigin="anonymous"></script>
     <title>Zach Grainge</title>
@@ -58,48 +59,66 @@
                 <div class="nameLetter">e</div>
             </div>
             <!-- <h1>zachary grainge</h1> -->
-            <h3>front end</h3>
-            <h3>web developer</h3>
-            <ul class="headerLinks">
-                <li><a class="icon" href="https://www.linkedin.com/in/zgrainge" target="_blank"><i
-                            class="fa-brands fa-linkedin"></i></a></li>
-                <li><a class="icon" href="https://www.github.com/Graingez" target="_blank"><i
-                            class="fa-brands fa-github"></a></i>
-                </li>
-            </ul>
+            <h3 class="headTop">front end</h3>
+            <h3 class="headBottom">web developer</h3>
         </div>
     </header>
     <section class="aboutMe " id="aboutMe">
         <div class="aboutInfo scrollIn wrapper">
             <h2>about me <i class="fa-solid fa-user-secret"></i></h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis culpa non obcaecati, quod tenetur,
-                qui
-                excepturi rem reiciendis earum dolor repellat ab ratione aut expedita cum illo ex soluta nemo iusto
-                doloribus voluptas. Impedit quos assumenda vitae pariatur repudiandae temporibus, ipsum maiores vero
-                beatae
-                fugit asperiores sit necessitatibus, dolores repellendus.</p>
+            <div class="aboutContent">
+                <div class="aboutPhoto scrollInLeft">
+                    <img src="./assets/zachPhoto.jpg" alt="photo of me" class="zachPhoto">
+                </div>
+                <div class="aboutText scrollInRight">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis culpa non obcaecati, quod
+                        tenetur,
+                        qui
+                        excepturi rem reiciendis earum dolor repellat ab ratione aut expedita cum illo ex soluta nemo
+                        iusto
+                        doloribus voluptas. Impedit quos assumenda vitae pariatur repudiandae temporibus, ipsum maiores
+                        vero
+                        beatae
+                        fugit asperiores sit necessitatibus, dolores repellendus.</p>
+                    <p class="scrollIn">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sed quis,
+                        quidem labore
+                        provident architecto corrupti corporis perspiciatis, </p>
+                </div>
+            </div>
         </div>
     </section>
     <section class="skills" id="skills">
         <div class="skillsInfo scrollIn wrapper">
             <h2>Skills</h2>
             <ul class="skillList ">
-                <li class="skillItem"><i class="fa-brands fa-html5 skillIcon"></i>
-                    <p class="skillName">HTML5</p>
-                </li>
-                <li class="skillItem"><i class="fa-brands fa-css3 skillIcon"></i>
-                    <p class="skillName">CSS3</p>
-                </li>
-                <li class="skillItem"><i class="fa-brands fa-sass skillIcon"></i>
-                    <p class="skillName">SASS</p>
-                </li>
-                <li class="skillItem"><i class="fa-brands fa-js-square skillIcon"></i>
-                    <p class="skillName">Java Script</p>
-                </li>
-                <li class="skillItem"><i class="fa-brands fa-react skillIcon"></i>
-                    <p class="skillName">React</p>
-                </li>
-
+                <div class="topStack">
+                    <li class="skillItem"><i class="devicon-html5-plain colored"></i>
+                        <p class="skillName">HTML5</p>
+                    </li>
+                    <li class="skillItem"><i class="devicon-css3-plain colored"></i>
+                        <p class="skillName">CSS3</p>
+                    </li>
+                    <li class="skillItem"><i class="devicon-sass-original colored"></i>
+                        <p class="skillName">SASS</p>
+                    </li>
+                    <li class="skillItem"><i class="devicon-javascript-plain colored"></i>
+                        <p class="skillName">Java Script</p>
+                    </li>
+                </div>
+                <div class="bottomStack">
+                    <li class="skillItem"><i class="fa-solid fa-arrow-right-arrow-left colored"></i>
+                        <p class="skillName">Rest-API</p>
+                    </li>
+                    <li class="skillItem"><i class="devicon-git-plain colored"></i>
+                        <p class="skillName">git</p>
+                    </li>
+                    <li class="skillItem"><i class="devicon-react-original colored"></i>
+                        <p class="skillName">React</p>
+                    </li>
+                    <li class="skillItem"><i class="devicon-firebase-plain colored"></i>
+                        <p class="skillName">Firebase</p>
+                    </li>
+                </div>
             </ul>
         </div>
     </section>
@@ -165,7 +184,23 @@
         </div>
     </section>
     <section class="contact" id="contact">
+        <div class="contactBox wrapper">
+            <h2> Contact Me</h2>
+            <p>send me an email:
+                <a class="email" href="mailto:zach.grainge@gmail.com?subject=we want to offer you a job">
+                    zach.grainge@gmail.com</a>
 
+            <ul class="contactLinks">
+                <li>
+                    <a class="icon" href="https://www.linkedin.com/in/zgrainge" target="_blank"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                </li>
+                <li>
+                    <a class="icon" href="https://www.github.com/Graingez" target="_blank"><i
+                            class="fa-brands fa-github"></a></i>
+                </li>
+            </ul>
+        </div>
     </section>
     <footer>
 

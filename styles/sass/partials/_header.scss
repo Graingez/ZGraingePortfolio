@@ -50,6 +50,12 @@ header{
         font-size: 1.5rem;
         margin: 0;
     }
+    .headTop::before{
+        content: open-quote;
+    }
+    .headBottom::after{
+        content: close-quote;
+    }
 
     ul{
         margin: 0;
@@ -64,9 +70,6 @@ header{
         }
     }
     
-}
-.icon{
-    animation:spin 2s ease-in;
 }
 .nameBox a:hover,
 .nameBox a:focus{
@@ -143,7 +146,7 @@ header{
 
 @keyframes show{
     0% {
-            transform: translatex(800px);
+            transform: translatey(150px);
     opacity: 0;
   }
   40% {
@@ -184,11 +187,6 @@ header{
   }
   100% {
         transform: translateY(0);
-  }
-}
-@for $icon from 1 through 2{
-  .icon:nth-of-type(#{$icon}){
-    animation:spin 2s #{$icon* 0.6}s ease-in;
   }
 } 
  @keyframes spin { 

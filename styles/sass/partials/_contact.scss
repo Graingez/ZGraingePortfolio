@@ -1,0 +1,34 @@
+.contact{
+    background-color: $fourthColor;
+    height: 30vh;
+    text-align: center;
+    padding-top: 50px;
+    color: $fithColor;
+    text-transform: uppercase;
+}
+.contactBox{
+    h2{
+        padding-top: 20px;
+        margin: 0;
+    }
+}
+.contactLinks{
+    padding-top: 30px;
+    padding: 0px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+        
+}
+.email{
+    color: white;
+    text-decoration: underline;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.icon{
+    font-size: 3rem;
+    color: white
+}
+
