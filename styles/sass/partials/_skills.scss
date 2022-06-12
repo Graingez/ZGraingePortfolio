@@ -1,10 +1,11 @@
 .skills{
     background-color: $sixthColor;
-    height: 60vh;
+    height: auto;
     font-family: $primaryFont;
+    padding-bottom: 50px;
 }
 .skillsInfo{
-    padding-top: 100px;
+    padding-top: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,7 +30,7 @@
     display: flex;
     justify-content: center;
     gap: 5%;
-    padding-top: 50px;
+    padding-top: 30px;
 }
 
 .skillItem{

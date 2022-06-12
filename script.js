@@ -41,7 +41,6 @@ window.addEventListener('mouseout', () => {
 let mouse = {
     x: null,
     y: null,
-    radius: (canvas.height / 90) * (canvas.width / 90)
 }
 window.addEventListener('mousemove', (e) => {
     mouse.x = e.x;
@@ -119,7 +118,6 @@ function moveDots() {
     dotJoin();
 }
 
-
 makeDots();
 moveDots();
 // HEADER BACKGROUND END
@@ -134,7 +132,7 @@ function scrollIn() {
     for (let i = 0; i < skillScroll.length; i++) {
         let windowHeight = window.innerHeight;
         let elementTop = skillScroll[i].getBoundingClientRect().top;
-        let elementVisible = 50;
+        let elementVisible = 150;
 
         if (elementTop < windowHeight - elementVisible) {
             skillScroll[i].classList.add("active");
@@ -181,3 +179,5 @@ function scrollInRight() {
 }
 
 window.addEventListener("scroll", scrollInRight);
+
+// contact SECTION

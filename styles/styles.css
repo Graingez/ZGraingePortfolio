@@ -321,7 +321,6 @@ nav ul a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 1200px;
   margin: 0 auto;
 }
 .navBar .navMenu {
@@ -858,11 +857,12 @@ header ul {
   background-color: #02111b;
   color: #FCFCFC;
   height: 100%;
+  padding: 50px 0;
 }
 
 .aboutInfo {
-  height: 100vh;
-  padding-top: 100px;
+  height: auto;
+  padding-top: 50px;
 }
 .aboutInfo h2 {
   font-family: "Cinzel", serif;
@@ -917,6 +917,7 @@ header ul {
   -ms-flex-preferred-size: 40%;
       flex-basis: 40%;
   width: 80%;
+  padding-bottom: 20px;
 }
 
 .zachPhoto {
@@ -951,12 +952,13 @@ header ul {
 }
 .skills {
   background-color: darkgrey;
-  height: 60vh;
+  height: auto;
   font-family: "Cinzel", serif;
+  padding-bottom: 50px;
 }
 
 .skillsInfo {
-  padding-top: 100px;
+  padding-top: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -999,7 +1001,7 @@ header ul {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 5%;
-  padding-top: 50px;
+  padding-top: 30px;
 }
 
 .skillItem {
@@ -1056,8 +1058,10 @@ header ul {
 .projects {
   background-color: #02111b;
   padding: 100px 0px;
+  text-align: center;
 }
 .projects h2 {
+  padding-bottom: 20px;
   margin: 0px;
   color: white;
   font-family: "Cinzel", serif;
@@ -1095,6 +1099,7 @@ header ul {
 }
 .projectContainer .projectBox img {
   width: 100%;
+  height: 100%;
   border-radius: 4px;
   margin: 0 auto 20px auto;
 }
@@ -1102,9 +1107,22 @@ header ul {
   color: white;
   font-family: "Cinzel", serif;
   margin: 0px;
+  padding-top: 10px;
 }
 .projectContainer .projectBox p {
   font-family: "Cuprum", sans-serif;
+}
+
+.techStack {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0px;
+  font-size: 2rem;
+  gap: 20px;
+}
+.techStack p {
+  margin: 0;
 }
 
 .projectLinks a {
@@ -1123,6 +1141,7 @@ header ul {
 
 .projectLinks a:active {
   border: 2px solid #FCFCFC;
+  background-color: orangered;
 }
 
 .projectBox:hover,
@@ -1178,39 +1197,161 @@ header ul {
 }
 .contact {
   background-color: rgb(22, 180, 233);
-  height: 30vh;
   text-align: center;
-  padding-top: 50px;
+  padding: 50px 0;
   color: #FCFCFC;
   text-transform: uppercase;
+  font-family: "Cinzel", serif;
 }
 
+.contactBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
 .contactBox h2 {
   padding-top: 20px;
   margin: 0;
 }
 
+.contactInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .contactLinks {
-  padding-top: 30px;
   padding: 0px;
+  padding-top: 30px;
   margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   gap: 10%;
 }
 
-.email {
+.emailLink {
+  padding-top: 40px;
+  text-decoration: none;
   color: white;
-  text-decoration: underline;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: bold;
 }
 
 .icon {
   font-size: 3rem;
   color: white;
+}
+
+.iconText {
+  margin-top: 0;
+}
+
+.contactLinks li:hover .icon,
+.contactLinks li:focus .icon {
+  color: orangered;
+}
+.contactLinks li:hover .iconText,
+.contactLinks li:focus .iconText {
+  color: orangered;
+}
+
+.formContent {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.formContent .email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  cursor: pointer;
+}
+.formContent .email input {
+  width: 100%;
+  font-family: "Cuprum", sans-serif;
+  padding: 20px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+}
+.formContent .message {
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  cursor: pointer;
+}
+.formContent .message textarea {
+  font-family: "Cuprum", sans-serif;
+  padding: 20px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  resize: none;
+}
+
+.formButton {
+  text-decoration: none;
+  color: white;
+  border: 2px solid #3F4045;
+  background-color: #3F4045;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.formButton:hover,
+.formButton:focus {
+  cursor: pointer;
+  background-color: #30292F;
+}
+
+.formButton:active {
+  border: 2px solid #FCFCFC;
+  background-color: orangered;
+}
+
+@media (max-width: 850px) {
+  .contactBox {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .contactLinks {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }

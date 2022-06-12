@@ -1,34 +1,117 @@
 .contact{
     background-color: $fourthColor;
-    height: 30vh;
     text-align: center;
-    padding-top: 50px;
+    padding: 50px 0;
     color: $fithColor;
     text-transform: uppercase;
+    font-family: $primaryFont;
+
 }
 .contactBox{
+    display: flex ;
+    justify-content: space-evenly;
     h2{
         padding-top: 20px;
         margin: 0;
     }
 }
+.contactInfo{
+    display: flex;
+    flex-direction: column;
+}
 .contactLinks{
-    padding-top: 30px;
     padding: 0px;
+    padding-top: 30px;
     margin: 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 10%;
         
 }
-.email{
+.emailLink{
+    padding-top: 40px;
+    text-decoration: none;
     color: white;
-    text-decoration: underline;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: bold;
 }
 .icon{
     font-size: 3rem;
-    color: white
+    color: white;
+}
+.iconText{
+    margin-top: 0;
+}
+.contactLinks li:hover,
+.contactLinks li:focus{
+    .icon{
+    color: orangered;
+    }
+    .iconText{
+        color: orangered;
+    }
 }
 
+.formContent{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    
+    .email{
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        input{
+            width: 100%;
+            font-family: $secondayFont;
+            padding: 20px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+        }
+    }
+    .message{
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        textarea{
+            font-family: $secondayFont;
+            padding: 20px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            resize: none;
+        }
+    }
+}
+.formButton{
+    text-decoration: none;
+    color: white;
+    border: 2px solid $secondaryColor;
+    background-color: $secondaryColor;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.formButton:hover,
+.formButton:focus{
+    cursor: pointer;
+    background-color: $tertiaryColor;
+}
+.formButton:active{
+    border: 2px solid $fithColor;
+    background-color: orangered;
+}
+
+@media(max-width:850px){
+    .contactBox{
+        flex-direction: column;
+    }
+    .contactLinks{
+        justify-content: center;
+    }
+}
