@@ -2,18 +2,23 @@
     background-color: $sixthColor;
     height: auto;
     font-family: $primaryFont;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
+    box-shadow: inset 1px 10px 10px -7px rgba(0,0,0,0.3);
 }
 .skillsInfo{
-    padding-top: 50px;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 20%;
     h2{
+        padding: 70px 0px 40px 0px;
         margin: 0 auto;
+        margin-top: 0;
         text-align: center;
         text-transform: uppercase;
+        color: $fithColor;
+        font-family: $primaryFont;
 
     }
     .skillList{
@@ -55,7 +60,7 @@
 .skillItem:hover,
 .skillItem:focus{
     .skillIcon{
-    color: $fithColor;
+        color: $fithColor;
     }
     .skillName{
         color: $fithColor;

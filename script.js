@@ -1,27 +1,37 @@
 const menuButton = document.querySelector('.menuButton');
-const popUpMenu = document.querySelector('.popUpMenu');
+const listMenu = document.querySelector('.listMenu')
 const skillItem = document.querySelectorAll('.skillItem');
 const skillName = document.querySelectorAll('.skillName')
-menuButton.addEventListener('click', () => {
-    if (popUpMenu.style.display === 'block') {
-        popUpMenu.style.display = 'none'
-    } else {
-        popUpMenu.style.display = 'block'
+
+menuButton.addEventListener('click', function (e) {
+    console.log(e);
+    if (e.target.localName === 'i') {
+        e.target.classList.toggle('fa-bars')
+        e.target.classList.toggle('fa-xmark')
     }
-});
-// menuButton.addEventListener('click', function (e) {
-//     console.log(e);
-//     if (e.target.localName === 'i') {
-//         e.target.classList.toggle('fa-bars')
-//         e.target.classList.toggle('fa-xmark')
+})
+menuButton.addEventListener('click', function () {
+    if (listMenu.classList.contains('showListMenu')) {
+        listMenu.classList.remove('showListMenu');
+
+    } else {
+        listMenu.classList.add('showListMenu');
+    }
+
+})
+// const navbar = document.querySelector('.nav');
+// const navLink = document.querySelectorAll('.navLink');
+// // ********** fixed navbar ************
+// window.addEventListener('scroll', function () {
+//     const scrollHeight = window.pageYOffset;
+//     const navHeight = navbar.getBoundingClientRect().height;
+//     if (scrollHeight > navHeight) {
+//         navbar.classList.add('fixedNav');
+//         navLink.style.color = '$secondaryColor';
+//     } else {
+//         navbar.classList.remove('fixedNav');
 //     }
 // })
-
-popUpMenu.addEventListener('click', () => {
-    if (popUpMenu.style.display === 'block') {
-        popUpMenu.style.display = 'none';
-    }
-});
 // HEADER BACKGROUND
 const canvas = document.querySelector('#canvas');
 const context = canvas.getContext('2d');
@@ -58,7 +68,7 @@ class connectorDots {
     draw() {
         context.beginPath();
         context.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-        context.fillStyle = '#FCFCFC';
+        context.fillStyle = '#e7e748';
         context.fill();
     }
     update() {
@@ -78,12 +88,12 @@ function makeDots() {
     dotsArray = [];
     let numberOfDots = 8;
     for (let i = 0; i < numberOfDots; i++) {
-        let size = 0;
+        let size = (Math.random() * (2, 5));
         let x = (Math.random() * (innerWidth - size * 2));
         let y = (Math.random() * (innerHeight - size * 2));
         let directionX = (Math.random() * 2);
         let directionY = (Math.random() * 2);
-        let color = '#FCFCFC'
+        let color = '#e7e748'
 
         dotsArray.push(new connectorDots(x, y, directionX, directionY, size, color));
     }
@@ -95,8 +105,8 @@ function dotJoin() {
         for (let b = a; b < dotsArray.length; b++) {
             let distance = ((dotsArray[a].x - dotsArray[b].x) * (dotsArray[a].x - dotsArray[b].x)) +
                 ((dotsArray[a].y - dotsArray[b].y) * (dotsArray[a].y - dotsArray[b].y));
-            if (distance < (canvas.width / 1) * (canvas.height / 1)) {
-                lineOpacity = 1
+            if (distance < (canvas.width / 500) * (canvas.height / 500)) {
+                lineOpacity = 0
                 context.strokeStyle = 'rgba(2, 17, 27, 1)';
                 context.lineWidth = 2;
                 context.beginPath();
@@ -121,6 +131,35 @@ function moveDots() {
 makeDots();
 moveDots();
 // HEADER BACKGROUND END
+// about shapes
+const blobs = document.querySelectorAll(".blob");
+let start = 0;
+let changeSpeed = randomSpeed();
+let returnanimationFrame;
+
+function bringBlob(set) {
+    if (!start || set - start >= changeSpeed) {
+        start = set;
+        blobs.forEach(blob => {
+            blob.style.borderTopLeftRadius = `${random() + 20}px ${random() + 20}px`;
+            blob.style.borderTopRightRadius = `${random() + 20}px ${random() + 20}px`;
+            blob.style.borderBottomLeftRadius = `${random() + 20}px ${random() + 20}px`;
+            blob.style.borderBottomRightRadius = `${random() + 20}px ${random() + 20}px`;
+        });
+    }
+    returnanimationFrame = requestAnimationFrame(bringBlob);
+}
+
+const random = () => {
+    return Math.floor((Math.random() * 360));
+};
+function randomSpeed() {
+    return Math.floor((Math.random() * 130) + 370)
+}
+
+bringBlob(start);
+
+
 
 
 // skills slide in

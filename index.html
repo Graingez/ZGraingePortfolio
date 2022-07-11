@@ -15,28 +15,34 @@
 </head>
 
 <body>
-    <nav>
-        <div class="navBar">
-            <div class="dropDown" id="mobileMenu">
-                <a class="menuButton"><i class="fa-solid fa-bars"></i></a>
+    <nav class="nav">
+        <div class="navBar ">
+            <div class="navName">
+                <p class="name">Zach Grainge </p>
+
             </div>
-            <div class="navMenu wrapper">
-                <ul class="listMenu">
-                    <li><a href="#">home</a></li>
-                    <li><a href="#aboutMe">about me</a></li>
-                    <li><a href="#skills">Tools</a></li>
-                    <li><a href="#projects">projects</a></li>
-                    <li><a href="#contact">contact</a></li>
-                </ul>
-            </div>
+            <button class="menuButton">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </div>
-        <ul class="popUpMenu">
-            <li><a href="#">home</a></li>
-            <li><a href="#aboutMe">about me</a></li>
-            <li><a href="#skills">Tools</a></li>
-            <li><a href="#projects">projects</a></li>
-            <li><a href="#contact">contact</a></li>
+        <ul class="listMenu ">
+            <li>
+                <a class="navLink" href="#">home</a>
+            </li>
+            <li>
+                <a class="navLink" href="#aboutMe">about</a>
+            </li>
+            <li>
+                <a class="navLink" href="#projects">projects</a>
+            </li>
+            <li>
+                <a class="navLink" href="#skills">toolKit</a>
+            </li>
+            <li>
+                <a class="navLink" href="#contact">contact</a>
+            </li>
         </ul>
+    </nav>
     </nav>
     <header id="#home">
         <div class="canvasBox">
@@ -63,65 +69,33 @@
             <h3 class="headBottom">web developer</h3>
         </div>
     </header>
-    <section class="aboutMe " id="aboutMe">
-        <div class="aboutInfo scrollIn wrapper">
-            <h2>about me <i class="fa-solid fa-user-secret"></i></h2>
-            <div class="aboutContent">
-                <div class="aboutPhoto scrollInLeft">
-                    <img src="./assets/zachPhoto.jpg" alt="photo of me" class="zachPhoto">
-                </div>
-                <div class="aboutText scrollInRight">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis culpa non obcaecati, quod
-                        tenetur,
-                        qui
-                        excepturi rem reiciendis earum dolor repellat ab ratione aut expedita cum illo ex soluta nemo
-                        iusto
-                        doloribus voluptas. Impedit quos assumenda vitae pariatur repudiandae temporibus, ipsum maiores
-                        vero
-                        beatae
-                        fugit asperiores sit necessitatibus, dolores repellendus.</p>
-                    <p class="scrollIn">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sed quis,
-                        quidem labore
-                        provident architecto corrupti corporis perspiciatis, </p>
-                </div>
+    <section class="aboutMe" id="aboutMe">
+        <div class="aboutInfo wrapper">
+            <h2>about me </h2>
+        </div>
+        <p class="aboutText wrapper scrollIn">Hey my name is Zach Grainge I am a Front-end Web Developer. with
+            experience building clean, responsive and easily accessible code using HTML, SCSS, JavaScript and
+            React. Using my
+            skills and experiancees gained while working in retail banking management this taught me how to
+            work with
+            various levels of staff and clientele while making data-informed operational decisions.
+        </p>
+        <div class="blobContainer wrapper">
+            <div class="blob blob1">
+                <div class="blob blob4"></div>
+            </div>
+            <div class=" blob blob2">
+                <div class="blob blob3"></div>
+            </div>
+            <div class="blob blob3">
+                <div class="blob blob1"></div>
+            </div>
+            <div class="blob blob4">
+                <div class="blob blob1"></div>
             </div>
         </div>
     </section>
-    <section class="skills" id="skills">
-        <div class="skillsInfo scrollIn wrapper">
-            <h2>Skills</h2>
-            <ul class="skillList ">
-                <div class="topStack">
-                    <li class="skillItem"><i class="devicon-html5-plain colored"></i>
-                        <p class="skillName">HTML5</p>
-                    </li>
-                    <li class="skillItem"><i class="devicon-css3-plain colored"></i>
-                        <p class="skillName">CSS3</p>
-                    </li>
-                    <li class="skillItem"><i class="devicon-sass-original colored"></i>
-                        <p class="skillName">SASS</p>
-                    </li>
-                    <li class="skillItem"><i class="devicon-javascript-plain colored"></i>
-                        <p class="skillName">Java Script</p>
-                    </li>
-                </div>
-                <div class="bottomStack">
-                    <li class="skillItem"><i class="fa-solid fa-arrow-right-arrow-left colored"></i>
-                        <p class="skillName">Rest-API</p>
-                    </li>
-                    <li class="skillItem"><i class="devicon-git-plain colored"></i>
-                        <p class="skillName">git</p>
-                    </li>
-                    <li class="skillItem"><i class="devicon-react-original colored"></i>
-                        <p class="skillName">React</p>
-                    </li>
-                    <li class="skillItem"><i class="devicon-firebase-plain colored"></i>
-                        <p class="skillName">Firebase</p>
-                    </li>
-                </div>
-            </ul>
-        </div>
-    </section>
+
     <section class="projects" id="projects">
         <h2>projects</h2>
         <div class="projectContainer wrapper">
@@ -130,9 +104,9 @@
                     <img src="./assets/rsz_barone.png" alt="">
                 </div>
                 <h4>BarOne</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam praesentium laudantium mollitia
-                    perferendis soluta ratione eaque placeat possimus a ex, similique alias blanditiis illum
-                    consequatur.
+                <p>A responsive multi-page website made using a clients design. This website is designed with responsive
+                    and
+                    accessibility in mind.
                 </p>
                 <ul class="techStack">
                     <li><i class="devicon-html5-plain colored"></i></li>
@@ -149,9 +123,9 @@
                     <img src="./assets/rsz_1gamenight.png" alt="">
                 </div>
                 <h4>Game Night App</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam praesentium laudantium mollitia
-                    perferendis soluta ratione eaque placeat possimus a ex, similique alias blanditiis illum
-                    consequatur.
+                <p> Having friends over and can't decide what game to play? Fear not! The GameNight app utilizes Vanilla
+                    JS to access the
+                    Boardgame Atlas API to find a game for you depending on game selection options.
                 </p>
                 <ul class="techStack">
                     <li><i class="devicon-html5-plain colored"></i></li>
@@ -188,18 +162,64 @@
             </div>
             <div class="projectBox projectFour scrollInRight">
                 <div class="projectImage">
-                    <img src="https://picsum.photos/400/300?grayscale" alt="">
+                    <img src="./assets/booknooksize.PNG" alt="">
                 </div>
-                <h4>project name</h4>
+                <h4>BookNook</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam praesentium laudantium mollitia
                     perferendis soluta ratione eaque placeat possimus a ex, similique alias blanditiis illum
                     consequatur.
                 </p>
+                <ul class="techStack">
+                    <li><i class="devicon-html5-plain colored"></i></li>
+                    <li><i class="devicon-sass-original colored"></i></li>
+                    <li><i class="devicon-react-plain colored"></i></li>
+                    <li>
+                        <p>+ API</p>
+                    </li>
+                </ul>
                 <div class="projectLinks">
-                    <a href="" target="_blank">live</a>
-                    <a href="" target="_blank">git</a>
+                    <a href="https://booknook.zacharygrainge.com/" target="_blank">live</a>
+                    <a href="https://github.com/Graingez/ZachGraingeProject3" target="_blank">git</a>
                 </div>
             </div>
+        </div>
+    </section>
+    <section class="skills" id="skills">
+        <div class="skillsInfo scrollIn wrapper">
+            <h2>toolkit</h2>
+            <ul class="skillList ">
+                <div class="topStack">
+                    <li class="skillItem"><i class="devicon-html5-plain colored"></i>
+                        <p class="skillName">HTML5</p>
+                    </li>
+                    <li class="skillItem"><i class="devicon-css3-plain colored"></i>
+                        <p class="skillName">CSS3</p>
+                    </li>
+                    <li class="skillItem"><i class="devicon-sass-original colored"></i>
+                        <p class="skillName">SASS</p>
+                    </li>
+                    <li class="skillItem"><i class="devicon-javascript-plain colored"></i>
+                        <p class="skillName">Java Script</p>
+                    </li>
+                    <li class="skillItem"><i class="devicon-lua-plain colored"></i>
+                        <p class="skillName">Lua</p>
+                    </li>
+                </div>
+                <div class="bottomStack">
+                    <li class="skillItem"><i class="fa-solid fa-arrow-right-arrow-left colored"></i>
+                        <p class="skillName">Rest-API</p>
+                    </li>
+                    <li class="skillItem"><i class="devicon-git-plain colored"></i>
+                        <p class="skillName">git</p>
+                    </li>
+                    <li class="skillItem"><i class="devicon-react-original colored"></i>
+                        <p class="skillName">React</p>
+                    </li>
+                    <li class="skillItem"><i class="devicon-firebase-plain colored"></i>
+                        <p class="skillName">Firebase</p>
+                    </li>
+                </div>
+            </ul>
         </div>
     </section>
     <section class="contact" id="contact">

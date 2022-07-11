@@ -1,115 +1,123 @@
-nav{
+.nav{
+    // background-color: $fourthColor;
+    // color: $primaryColor;
     background-color: $primaryColor;
-    color: $fithColor;
+    color: $secondaryColor;
     position: fixed;
+    display: flex;
     z-index: 5;
     width: 100%;
+    padding: 0 5% 0 10%;
     top: 0;
     left: 0;
     border-bottom: 2px solid $fourthColor;
     font-family: $primaryFont;
-    font-weight: 600;
-    ul{
-        display: flex;
-        gap: 4%;
-        color: $fithColor;
-        justify-content: center;
-        align-content: center;
-        margin:0 auto;
-        
-        padding: 0;
-        
-        a{
-            display: block;
-            text-decoration: none;
-            color: $fithColor;
-            font-size: 1rem;
-            text-transform: uppercase;
-            line-height: 2.5rem;
-            transition: .2s ease-in-out;
-        }
-    }
-}
-.navBar{
-    padding-right: 5%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    margin: 0 auto;
-    
-    .navMenu{
+    font-weight: bold;
+    .navBar{
+        max-width: 1500px;
         width: 90%;
-        margin-right: 0;
-    }
-    #mobileMenu{
-        color: $fithColor;
-        font-size: 1rem;
-
-        .menuButton{
-            display: none;
-            text-decoration: none;
-            color: $fithColor;
-            font-size: 2rem;
-        }
-    }
-    
-    .menuButton:hover,
-    .menuButton:focus{
-        color: $fourthColor;
-    }
-    .menuButton:active{
-        color: $fithColor;
+        margin: 0 auto;
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
     }
 }
-nav li:hover,
-nav li:focus{
-    overflow: hidden;
-    animation: navHover 1.5s ease-in-out infinite;
-    
+.fixedNav{
+    background-color: $primaryColor;
+    color: $secondaryColor;
+    position: fixed;
 }
-.popUpMenu{
-    display: none;
+.navName{
     text-align: center;
+    margin-right: 50px;
 }
-
-nav a:hover,
-nav a:focus{
-    color: $fourthColor;
+.menuButton{
+    display: none;
 }
-nav a:active{
-    color: $fithColor;
-}
-
-@keyframes navHover{
-    0% {
-		transform: translatey(0px);
-	}  
-	50% {
-		transform: translatey(-5px);
-	}
-	100% {
-		
-		transform: translatey(0px);
-	}
-}
-@media (max-width: 650px) {
-    nav ul a{
-        font-size: .8rem;
-    }
-}
-@media (max-width: 520px) {
-    .listMenu{
-        display: none;
-    }
+.listMenu{
+    display:flex;
+    justify-content: flex-end;
+    padding: 0;
+    width: 80%;
+    gap: 20px;
     
-    .navBar #mobileMenu .menuButton{
-        display:inline-block;
+}
+.navLink{
+    color: $secondaryColor;
+    text-decoration: none;
+    position: relative;
+
+}
+// .fixedNavlink{
+//     color: $secondaryColor !important;
+// }
+
+ .listMenu a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: $tertiaryColor;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+.listMenu a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+//   
+
+// @keyframes navHover{
+//     0% {
+// 		transform: translatey(0px);
+// 	}  
+// 	50% {
+// 		transform: translatey(-5px);
+// 	}
+// 	100% {
+		
+// 		transform: translatey(0px);
+// 	}
+// }
+@media (max-width: 700px) {
+    nav{
+        flex-direction: column;
+        padding: 0 10px
+    }
+    .menuButton{
+        display: block;
+    }
+    .listMenu{
+        overflow: hidden;
+        height: 0;
+        flex-direction: column;
+        margin: 0;
+        padding: 0 10%;
+    }
+    .showListMenu{
+        height: 100%;
+        width: 100%;
+        padding-bottom: 20px;
+        border-top: 2px solid;    
+    }
+}
+// @media (max-width: 520px) {
+//     .listMenu{
+//         display: none;
+//     }
+    
+//     .navBar #mobileMenu .menuButton{
+//         display:inline-block;
         
-    }
-}
-@media( min-width: 650px){
-    .navBar div .popUpMenu{
-        display: none;
-    }
-}
+//     }
+// }
+// @media( min-width: 650px){
+//     .navBar div .popUpMenu{
+//         display: none;
+//     }
+// }

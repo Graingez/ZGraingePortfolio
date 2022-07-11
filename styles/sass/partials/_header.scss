@@ -1,10 +1,11 @@
 header{
     height: 100vh;
-    // background-color: $secondaryColor;
-    background-color: $fourthColor;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('../assets/forestback.jpg');
+    background-color: $primaryColor;
     position: relative;
     color: $fithColor;
-    
     ul{
         display: flex;
         flex-direction: row;
@@ -16,9 +17,9 @@ header{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 60%;
-    height: 60%;  
-    background-color: $fourthColor;
+    width: 80%;
+    height: 80%;  
+    // background-color: $fourthColor;
 }
 .canvasBox{
     width: 60%;
@@ -38,6 +39,7 @@ header{
     padding: 20px;
     border-radius: 10px;
     text-align: center;
+    opacity: 1;
     h1{
         font-size: 4rem;
         margin: 0;
