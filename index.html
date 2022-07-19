@@ -71,28 +71,32 @@
     </header>
     <section class="aboutMe" id="aboutMe">
         <div class="aboutInfo wrapper">
-            <h2>about me </h2>
+            <h2>about me! </h2>
         </div>
-        <p class="aboutText wrapper scrollIn">Hey my name is Zach Grainge I am a Front-end Web Developer. with
+        <div class="aboutContainer wrapper">
+        <div class="aboutText">
+        <p class="scrollIn">Hey my name is Zach Grainge I am a Front-end Web Developer. with
             experience building clean, responsive and easily accessible code using HTML, SCSS, JavaScript and
             React. Using my
             skills and experiancees gained while working in retail banking management this taught me how to
             work with
             various levels of staff and clientele while making data-informed operational decisions.
         </p>
-        <div class="blobContainer wrapper">
-            <div class="blob blob1">
-                <div class="blob blob4"></div>
+        <!-- <div class="blobContainer wrapper">
+            <!-- <div class="blob blob1">
             </div>
             <div class=" blob blob2">
-                <div class="blob blob3"></div>
             </div>
             <div class="blob blob3">
-                <div class="blob blob1"></div>
+            
             </div>
-            <div class="blob blob4">
-                <div class="blob blob1"></div>
-            </div>
+            <div class="blob blob4"> -->
+
+            <!-- </div> --> 
+        </div>
+        <div class="avatar">
+            <img src="./assets/ZachAvatar.png" alt="Cartoon Photo of Zach Grainge">
+        </div>
         </div>
     </section>
 
@@ -101,9 +105,9 @@
         <div class="projectContainer wrapper">
             <div class="projectBox projectOne scrollInLeft">
                 <div class="projectImage">
-                    <img src="./assets/rsz_barone.png" alt="">
+                    <img src="./assets/walky talky.PNG" alt="">
                 </div>
-                <h4>BarOne</h4>
+                <h4>Walky Talky</h4>
                 <p>A responsive multi-page website made using a clients design. This website is designed with responsive
                     and
                     accessibility in mind.
@@ -111,16 +115,20 @@
                 <ul class="techStack">
                     <li><i class="devicon-html5-plain colored"></i></li>
                     <li><i class="devicon-sass-original colored"></i></li>
-                    <li><i class="devicon-javascript-plain colored"></i></li>
+                    <li><i class="devicon-react-original colored"></i></li>
+                    <li><i class="devicon-firebase-plain colored"></i></li>
+                    <li>
+                        <p>+ API</p>
+                    </li>
                 </ul>
                 <div class="projectLinks">
-                    <a href="https://polite-croissant-34b8f9.netlify.app" target="_blank">live</a>
-                    <a href="https://github.com/Graingez/ZGrainge-Bar1" target="_blank">git</a>
+                    <a href="https://walkytalky.netlify.app/" target="_blank">live</a>
+                    <a href="https://github.com/talkie-walkie/walky-talky" target="_blank">git</a>
                 </div>
             </div>
             <div class="projectBox projectTwo scrollInRight">
                 <div class="projectImage">
-                    <img src="./assets/rsz_1gamenight.png" alt="">
+                    <img src="./assets/gamenight.png" alt="">
                 </div>
                 <h4>Game Night App</h4>
                 <p> Having friends over and can't decide what game to play? Fear not! The GameNight app utilizes Vanilla
@@ -145,9 +153,7 @@
                     <img src="./assets/rsz_doodleapp.png" alt="">
                 </div>
                 <h4>Doodle App</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam praesentium laudantium mollitia
-                    perferendis soluta ratione eaque placeat possimus a ex, similique alias blanditiis illum
-                    consequatur.
+                <p>Take some time to relax and draw some happly little clouds!
                 </p>
                 <ul class="techStack">
                     <li><i class="devicon-html5-plain colored"></i></li>
@@ -250,6 +256,12 @@
             </div>
             <div class="contactForm">
                 <form class="formContent" action="https://formspree.io/f/mgedqnpg" method="POST">
+                    <div class="name">
+                        <label for="name">
+                            Your name:
+                        </label>
+                        <input type="text" name="name" placeholder="Enter  Your Name Here...">
+                    </div>
                     <div class="email">
                         <label for="email">
                             Your email:

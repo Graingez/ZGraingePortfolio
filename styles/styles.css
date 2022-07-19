@@ -368,11 +368,9 @@ ul {
             flex-direction: column;
     padding: 0 10px;
   }
-
   .menuButton {
     display: block;
   }
-
   .listMenu {
     overflow: hidden;
     height: 0;
@@ -383,7 +381,6 @@ ul {
     margin: 0;
     padding: 0 10%;
   }
-
   .showListMenu {
     height: 100%;
     width: 100%;
@@ -398,7 +395,7 @@ header {
   background-image: url("../assets/forestback.jpg");
   background-color: #3B413C;
   position: relative;
-  color: #FFFFFF;
+  color: #94D1BE;
 }
 header ul {
   display: -webkit-box;
@@ -463,6 +460,8 @@ header ul {
           animation: show 3s ease-in;
   font-size: 1.5rem;
   margin: 0;
+  color: #FFFFFF;
+  text-shadow: 2px 0 #3B413C, -2px 0 #3B413C, 0 2px #3B413C, 0 -2px #3B413C, 1px 1px #3B413C, -1px -1px #3B413C, 1px -1px #3B413C, -1px 1px #3B413C;
 }
 .nameBox .headTop::before {
   content: open-quote;
@@ -501,6 +500,7 @@ header ul {
 .nameLetter {
   font-size: 4rem;
   text-transform: uppercase;
+  text-shadow: 2px 0 #3B413C, -2px 0 #3B413C, 0 2px #3B413C, 0 -2px #3B413C, 1px 1px #3B413C, -1px -1px #3B413C, 1px -1px #3B413C, -1px 1px #3B413C;
 }
 
 .nameLetter:nth-of-type(1) {
@@ -814,7 +814,6 @@ header ul {
   .nameLetter {
     font-size: 3rem;
   }
-
   .nameBox h3 {
     font-size: 1.5rem;
   }
@@ -823,7 +822,6 @@ header ul {
   .nameLetter {
     font-size: 2rem;
   }
-
   .nameBox h3 {
     font-size: 1rem;
   }
@@ -837,23 +835,50 @@ header ul {
   background-color: #3B413C;
   color: #FFFFFF;
   padding: 50px 0;
-  height: 100vh;
   position: relative;
-  text-align: center;
 }
 .aboutMe h2 {
   font-family: "Cinzel", serif;
   text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.aboutContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .aboutText {
   position: relative;
   z-index: 3;
+  text-align: left;
   line-height: 1.7;
   font-size: 1.2rem;
-  top: 25%;
   color: #FFFFFF;
   font-family: "Cuprum", sans-serif;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.avatar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .blobContainer {
@@ -933,6 +958,20 @@ header ul {
   top: 50px;
 }
 
+@media (max-width: 750px) {
+  .blob {
+    display: none;
+  }
+  .aboutContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .aboutText {
+    margin: 0 auto;
+  }
+}
 .skills {
   background-color: #9DB5B2;
   height: auto;
@@ -963,6 +1002,7 @@ header ul {
   text-transform: uppercase;
   color: #FFFFFF;
   font-family: "Cinzel", serif;
+  text-decoration: underline;
 }
 .skillsInfo .skillList {
   display: -webkit-box;
@@ -1038,7 +1078,6 @@ header ul {
   .skillItem i {
     font-size: 2.5rem;
   }
-
   .skillItem p {
     font-size: 0.8rem;
   }
@@ -1058,6 +1097,7 @@ header ul {
   margin: 0px;
   color: white;
   font-family: "Cinzel", serif;
+  text-decoration: underline;
 }
 
 .projectContainer {
@@ -1070,7 +1110,7 @@ header ul {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   text-align: center;
-  width: 80%;
+  width: 100%;
 }
 .projectContainer .projectBox {
   padding: 25px;
@@ -1089,6 +1129,7 @@ header ul {
   border: 5px solid #FFFFFF;
   background-color: #9DB5B2;
   color: #FFFFFF;
+  border-radius: 10px;
   -webkit-box-shadow: 0px 15px 13px 5px rgba(0, 0, 0, 0.4);
           box-shadow: 0px 15px 13px 5px rgba(0, 0, 0, 0.4);
 }
@@ -1185,12 +1226,12 @@ header ul {
 
 @media (max-width: 700px) {
   .projectContainer .projectBox {
-    width: 70%;
+    width: 100%;
   }
 }
 @media (max-width: 500px) {
   .projectContainer .projectBox {
-    width: 80%;
+    width: 100%;
   }
 }
 @media (max-width: 400px) {
@@ -1200,7 +1241,6 @@ header ul {
 }
 .contact {
   background-color: #94D1BE;
-  background-image: url("../assets/tree-silhouette-2-1.png");
   background-position: center;
   overflow: visible;
   background-size: contain;
@@ -1219,9 +1259,8 @@ header ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 .contactBox h2 {
   padding-top: 20px;
@@ -1295,7 +1334,8 @@ header ul {
       -ms-flex-align: center;
           align-items: center;
 }
-.formContent .email {
+.formContent .email,
+.formContent .name {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1305,11 +1345,11 @@ header ul {
           flex-direction: column;
   cursor: pointer;
 }
-.formContent .email input {
+.formContent .email input,
+.formContent .name input {
   width: 100%;
   font-family: "Cuprum", sans-serif;
   padding: 20px;
-  width: 100%;
   border: none;
   border-radius: 5px;
 }
@@ -1357,14 +1397,12 @@ header ul {
   .contact {
     background-image: none;
   }
-
   .contactBox {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-
   .contactLinks {
     -webkit-box-pack: center;
         -ms-flex-pack: center;

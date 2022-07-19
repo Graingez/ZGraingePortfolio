@@ -1,83 +1,106 @@
-.aboutMe{
-    background-color: $primaryColor;
-    color: $fithColor;
-    padding: 50px 0;
-    height: 100vh;
-    position: relative;
-    text-align: center;
+.aboutMe {
+  background-color: $primaryColor;
+  color: $fithColor;
+  padding: 50px 0;
+  position: relative;
+  //   text-align: center;
 
-    h2{
-        font-family: $primaryFont;
-        text-transform: uppercase;
-    }
+  h2 {
+    font-family: $primaryFont;
+    text-transform: uppercase;
+    text-decoration: underline;
+  }
 }
-.aboutText{
-    position: relative;
-    z-index: 3;
-    line-height: 1.7;
-    font-size: 1.2rem;
-    top: 25%;
-    color: $fithColor;
-    font-family: $secondayFont;
+.aboutContainer {
+  display: flex;
 }
-.blobContainer{
-    position: relative;
-    z-index: 2;
-    height: 100%;
-    width: 100%;
+.aboutText {
+  position: relative;
+  z-index: 3;
+  text-align: left;
+  line-height: 1.7;
+  font-size: 1.2rem;
+  color: $fithColor;
+  font-family: $secondayFont;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.blob1 { 
-    width: 350px;
-    height: 200px;
-    transition: border-radius .5s linear;
-    border: 4px solid $tertiaryColor;
-    background-color: $secondaryColor;
-    opacity: .4;
-    transform: skew(35deg, 10deg);
-    margin: 20px;
-    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
-    position: absolute;
-    top: -200px;
-    right: 240px;
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.blobContainer {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+}
+.blob1 {
+  width: 350px;
+  height: 200px;
+  transition: border-radius 0.5s linear;
+  border: 4px solid $tertiaryColor;
+  background-color: $secondaryColor;
+  opacity: 0.4;
+  transform: skew(35deg, 10deg);
+  margin: 20px;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: -200px;
+  right: 240px;
 }
 .blob2 {
-    width: 200px;
-    height: 250px;
-    border: 4px solid $secondaryColor;
-    background-color: $tertiaryColor;
-    opacity: 0.4;
-    transition: border-radius .5s linear;
-    margin: 20px;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
-    position: absolute;
-    top: 400px;
-    left: 0;
-    transform: skew(25deg, 25deg);
+  width: 200px;
+  height: 250px;
+  border: 4px solid $secondaryColor;
+  background-color: $tertiaryColor;
+  opacity: 0.4;
+  transition: border-radius 0.5s linear;
+  margin: 20px;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 400px;
+  left: 0;
+  transform: skew(25deg, 25deg);
 }
 .blob3 {
-    width: 200px;
-    height: 300px;
-    transform: skew(-15deg, -15deg);
-    border: 4px solid $tertiaryColor;
-    background-color: $secondaryColor;
-    opacity: .4;
-    transition: border-radius .5s linear;
-    margin: 20px;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
-    position: absolute;
-    bottom: 130px;
-    right: 100px;
+  width: 200px;
+  height: 300px;
+  transform: skew(-15deg, -15deg);
+  border: 4px solid $tertiaryColor;
+  background-color: $secondaryColor;
+  opacity: 0.4;
+  transition: border-radius 0.5s linear;
+  margin: 20px;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  position: absolute;
+  bottom: 130px;
+  right: 100px;
 }
 .blob4 {
-    width: 400px;
-    height: 300px;
-    border: 4px solid $secondaryColor;
-    background-color: $tertiaryColor;
-    opacity: .2;
-    transition: border-radius .5s linear;
-    margin: 20px;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
-    position: absolute;
-    left: 200px;
-    top:50px;
+  width: 400px;
+  height: 300px;
+  border: 4px solid $secondaryColor;
+  background-color: $tertiaryColor;
+  opacity: 0.2;
+  transition: border-radius 0.5s linear;
+  margin: 20px;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 200px;
+  top: 50px;
+}
+@media (max-width: 750px) {
+  .blob {
+    display: none;
+  }
+  .aboutContainer {
+    flex-direction: column-reverse;
+  }
+  .aboutText {
+    margin: 0 auto;
+  }
 }
