@@ -19,40 +19,53 @@
 
 .projectContainer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
   text-align: center;
-  width: 100%;
+  width: 80%;
+
   .projectBox {
     padding: 25px;
     margin: 25px;
-    width: 40%;
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    gap: 20px;
     align-items: center;
-    border: 5px solid $fithColor;
+    border: 1px solid $fithColor;
     background-color: $fourthColor;
     color: $fithColor;
     border-radius: 10px;
     box-shadow: 0px 15px 13px 5px rgba(0, 0, 0, 0.4);
-    img {
-      width: 100%;
-      height: 100%;
-      border-radius: 4px;
-      margin: 0 auto 20px auto;
-    }
+
     h4 {
       color: white;
       font-family: $primaryFont;
       margin: 0px;
       padding-top: 10px;
+      font-size: 1.2rem;
+      flex-basis: 20%;
     }
     p {
       font-family: $secondayFont;
+      flex-basis: 40%;
     }
   }
 }
+.projectImage {
+  flex-basis: 40%;
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+  }
+}
+.projectInfo {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 60%;
+}
 .techStack {
+  flex-basis: 20%;
   display: flex;
   padding: 0px;
   font-size: 2rem;
@@ -67,6 +80,8 @@
 }
 
 .projectLinks {
+  flex-basis: 20%;
+  padding-top: 15px;
   a {
     text-decoration: none;
     color: $primaryColor;
@@ -109,9 +124,11 @@
   opacity: 1;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
   .projectContainer {
     .projectBox {
+      flex-direction: column;
+
       width: 100%;
     }
   }
