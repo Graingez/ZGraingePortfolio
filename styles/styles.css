@@ -1091,6 +1091,7 @@ header ul {
   overflow: visible;
   background-size: contain;
   background-repeat: no-repeat;
+  overflow-x: hidden;
 }
 .projects h2 {
   padding-bottom: 20px;
