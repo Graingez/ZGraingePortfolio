@@ -26,20 +26,23 @@
 
   .projectBox {
     padding: 25px;
-    margin: 25px;
-    width: 100%;
+    margin: 0 AUTO;
+    margin-bottom: 40px;
+    width: 80%;
     display: flex;
     gap: 20px;
     align-items: center;
     border: 1px solid $fithColor;
     background-color: $fourthColor;
-    color: $fithColor;
+    color: $seventhColor;
     border-radius: 10px;
     box-shadow: 0px 15px 13px 5px rgba(0, 0, 0, 0.4);
 
     h4 {
       color: white;
       font-family: $primaryFont;
+      color: $seventhColor;
+      font-weight: 800;
       margin: 0px;
       padding-top: 10px;
       font-size: 1.2rem;
@@ -128,7 +131,8 @@
   .projectContainer {
     .projectBox {
       flex-direction: column;
-
+      margin: 0px;
+      margin-bottom: 40px;
       width: 100%;
     }
   }

@@ -8,7 +8,7 @@
   background-repeat: no-repeat;
   text-align: center;
   padding: 50px 0;
-  color: $fithColor;
+  color: $seventhColor;
   text-transform: uppercase;
   font-family: $primaryFont;
   box-shadow: 1px 0px 10px 9px rgba(0, 0, 0, 0.1);
@@ -38,7 +38,7 @@
 .emailLink {
   padding-top: 40px;
   text-decoration: none;
-  color: white;
+  color: $seventhColor;
   font-size: 1.1rem;
   font-weight: bold;
 }
@@ -67,7 +67,7 @@
   border: none;
   justify-content: center;
   align-items: center;
-
+  font-weight: 600;
   .email,
   .name {
     display: flex;
