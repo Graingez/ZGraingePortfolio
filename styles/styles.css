@@ -1239,7 +1239,6 @@ header ul {
       justify-content: space-around;
 }
 .contactBox h2 {
-  padding-top: 20px;
   margin: 0;
 }
 
@@ -1254,24 +1253,15 @@ header ul {
 }
 
 .contactLinks {
-  padding: 0px;
-  padding-top: 30px;
-  margin: 0;
+  padding: 0;
+  padding-top: 40px;
+  min-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  gap: 10%;
-}
-
-.emailLink {
-  padding-top: 40px;
-  text-decoration: none;
-  color: #292e29;
-  font-size: 1.1rem;
-  font-weight: bold;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
 }
 
 .icon {
@@ -1326,7 +1316,7 @@ header ul {
 .formContent .name input {
   width: 100%;
   font-family: "Cuprum", sans-serif;
-  padding: 20px;
+  padding: 15px;
   border: none;
   border-radius: 5px;
 }
