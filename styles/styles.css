@@ -454,21 +454,16 @@ header ul {
   margin: 0;
   opacity: 1;
   text-transform: uppercase;
+  color: #ffffff;
 }
 .nameBox h3 {
   text-transform: uppercase;
-  -webkit-animation: show 3s ease-in;
-          animation: show 3s ease-in;
+  -webkit-animation: show 2s ease-in;
+          animation: show 2s ease-in;
   font-size: 1.5rem;
   margin: 0;
   color: #ffffff;
   text-shadow: 2px 0 #3b413c, -2px 0 #3b413c, 0 2px #3b413c, 0 -2px #3b413c, 1px 1px #3b413c, -1px -1px #3b413c, 1px -1px #3b413c, -1px 1px #3b413c;
-}
-.nameBox .headTop::before {
-  content: open-quote;
-}
-.nameBox .headBottom::after {
-  content: close-quote;
 }
 .nameBox ul {
   margin: 0;
@@ -501,67 +496,8 @@ header ul {
 .nameLetter {
   font-size: 4rem;
   text-transform: uppercase;
+  color: #ffffff;
   text-shadow: 2px 0 #3b413c, -2px 0 #3b413c, 0 2px #3b413c, 0 -2px #3b413c, 1px 1px #3b413c, -1px -1px #3b413c, 1px -1px #3b413c, -1px 1px #3b413c;
-}
-
-.nameLetter:nth-of-type(1) {
-  -webkit-animation: letterBounce 1s 0.15s both;
-          animation: letterBounce 1s 0.15s both;
-}
-
-.nameLetter:nth-of-type(2) {
-  -webkit-animation: letterBounce 1s 0.3s both;
-          animation: letterBounce 1s 0.3s both;
-}
-
-.nameLetter:nth-of-type(3) {
-  -webkit-animation: letterBounce 1s 0.45s both;
-          animation: letterBounce 1s 0.45s both;
-}
-
-.nameLetter:nth-of-type(4) {
-  -webkit-animation: letterBounce 1s 0.6s both;
-          animation: letterBounce 1s 0.6s both;
-}
-
-.nameLetter:nth-of-type(5) {
-  -webkit-animation: letterBounce 1s 0.75s both;
-          animation: letterBounce 1s 0.75s both;
-}
-
-.nameLetter:nth-of-type(6) {
-  -webkit-animation: letterBounce 1s 0.9s both;
-          animation: letterBounce 1s 0.9s both;
-}
-
-.nameLetter:nth-of-type(7) {
-  -webkit-animation: letterBounce 1s 1.05s both;
-          animation: letterBounce 1s 1.05s both;
-}
-
-.nameLetter:nth-of-type(8) {
-  -webkit-animation: letterBounce 1s 1.2s both;
-          animation: letterBounce 1s 1.2s both;
-}
-
-.nameLetter:nth-of-type(9) {
-  -webkit-animation: letterBounce 1s 1.35s both;
-          animation: letterBounce 1s 1.35s both;
-}
-
-.nameLetter:nth-of-type(10) {
-  -webkit-animation: letterBounce 1s 1.5s both;
-          animation: letterBounce 1s 1.5s both;
-}
-
-.nameLetter:nth-of-type(11) {
-  -webkit-animation: letterBounce 1s 1.65s both;
-          animation: letterBounce 1s 1.65s both;
-}
-
-.nameLetter:nth-of-type(12) {
-  -webkit-animation: letterBounce 1s 1.8s both;
-          animation: letterBounce 1s 1.8s both;
 }
 
 .nameLetter:hover {
@@ -855,7 +791,7 @@ header ul {
   z-index: 3;
   text-align: left;
   line-height: 1.7;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #ffffff;
   font-family: "Cuprum", sans-serif;
   width: 80%;
@@ -880,6 +816,9 @@ header ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: ease-in-out;
+  transition: ease-in-out;
+  justify-content: center;
 }
 
 .blobContainer {
@@ -972,6 +911,10 @@ header ul {
   .aboutText {
     margin: 0 auto;
     font-size: 1rem;
+  }
+  .avatar {
+    width: 50%;
+    margin: 0 auto;
   }
 }
 .skills {
