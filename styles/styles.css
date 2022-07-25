@@ -500,10 +500,6 @@ header ul {
   text-shadow: 2px 0 #3b413c, -2px 0 #3b413c, 0 2px #3b413c, 0 -2px #3b413c, 1px 1px #3b413c, -1px -1px #3b413c, 1px -1px #3b413c, -1px 1px #3b413c;
 }
 
-.nameLetter:hover {
-  color: yellow;
-}
-
 @-webkit-keyframes letterBounce {
   0% {
     -webkit-transform: translateY(-500px);
