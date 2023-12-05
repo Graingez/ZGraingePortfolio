@@ -90,9 +90,9 @@
 }
 .formButton {
   text-decoration: none;
-  color: white;
+  color: $primaryColor;
   border: 2px solid $secondaryColor;
-  background-color: $primaryColor;
+  background-color: white;
   padding: 10px 20px;
   border-radius: 5px;
 }
@@ -100,11 +100,13 @@
 .formButton:hover,
 .formButton:focus {
   cursor: pointer;
-  background-color: $tertiaryColor;
+  background-color: orangered;
+  color: white;
 }
 .formButton:active {
   border: 2px solid $fithColor;
   background-color: orangered;
+  color: white;
 }
 
 @media (max-width: 850px) {

@@ -68,7 +68,7 @@ class connectorDots {
     draw() {
         context.beginPath();
         context.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-        context.fillStyle = '#e7e748';
+        context.fillStyle = "#C4B2BC";
         context.fill();
     }
     update() {
@@ -86,14 +86,14 @@ class connectorDots {
 }
 function makeDots() {
     dotsArray = [];
-    let numberOfDots = 8;
+    let numberOfDots = 15;
     for (let i = 0; i < numberOfDots; i++) {
         let size = (Math.random() * (2, 5));
         let x = (Math.random() * (innerWidth - size * 2));
         let y = (Math.random() * (innerHeight - size * 2));
         let directionX = (Math.random() * 2);
         let directionY = (Math.random() * 2);
-        let color = '#e7e748'
+        let color = "#C4B2BC";
 
         dotsArray.push(new connectorDots(x, y, directionX, directionY, size, color));
     }

@@ -28,6 +28,7 @@
   position: fixed;
 }
 .navName {
+  color: $tertiaryColor;
   text-align: center;
   margin-right: 50px;
 }
@@ -42,7 +43,7 @@
   gap: 20px;
 }
 .navLink {
-  color: $secondaryColor;
+  color: $tertiaryColor;
   text-decoration: none;
   position: relative;
 }
